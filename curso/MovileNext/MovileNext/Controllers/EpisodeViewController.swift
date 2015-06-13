@@ -31,6 +31,10 @@ class EpisodeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.titleLabel.text = "Pilot"
+        
+        // Remover margem do textview
+        descriptionTextView.textContainer.lineFragmentPadding = 0
+        descriptionTextView.textContainerInset = UIEdgeInsetsZero
     }
 
     override func didReceiveMemoryWarning() {
