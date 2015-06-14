@@ -31,7 +31,7 @@ class SeasonViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let indentifier = Reusable.EpisodeCell.identifier!
         let cell = tableView.dequeueReusableCellWithIdentifier(indentifier, forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = "S01E01 - C\(indexPath.section)R\(indexPath.row)"
+        cell.textLabel?.text = "S01E01 - S\(indexPath.section)R\(indexPath.row)"
         cell.detailTextLabel?.text = "Winter Is Coming"
         
         return cell
