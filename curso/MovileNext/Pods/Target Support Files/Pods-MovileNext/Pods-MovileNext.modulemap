@@ -1,0 +1,6 @@
+framework module Pods_MovileNext {
+  umbrella header "Pods-MovileNext-umbrella.h"
+
+  export *
+  module * { export * }
+}

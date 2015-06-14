@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F0FD604735A8998895F2ECC /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 578927513A972BAC99AD27D4 /* Main.storyboard */; };
 		2483E2B1357CBE7861EA7806 /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4F92A6B9ED5C94A5D8B222 /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3B115B30BCA7534676ECFE18 /* Pods_MovileNext.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39A4C77D01B26AACABA55B1 /* Pods_MovileNext.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9F04F72A38FF22B3B76F4CFD /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 97AC5057C3C7168BA003AB12 /* LaunchScreen.xib */; };
 		A9361B0A207A551A26A3515A /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015A11F4273648E857C0B5D /* Storyboards.swift */; };
 		AC8FCCCFE52578BC578E6A60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981D578DC870667A53A9883D /* Foundation.framework */; };
@@ -17,6 +18,7 @@
 		CE5C32471B2DCCBF00F4628B /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C32461B2DCCBF00F4628B /* EpisodeTableViewCell.swift */; };
 		CE5C32491B2DD3D300F4628B /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C32481B2DD3D300F4628B /* ShowsViewController.swift */; };
 		CE5C324B1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C324A1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift */; };
+		CE5C324D1B2E1ABF00F4628B /* TraktHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C324C1B2E1ABF00F4628B /* TraktHTTPClient.swift */; };
 		CEF7F3A91B2CAE3400D6597B /* UIColor+MovileNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3A81B2CAE3400D6597B /* UIColor+MovileNext.swift */; };
 		CEF7F3AB1B2CB01800D6597B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3AA1B2CB01800D6597B /* CustomNavigationController.swift */; };
 		CEF7F3AD1B2CB12700D6597B /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */; };
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FB3289496772B1D744FD8CC /* Pods-MovileNext.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovileNext.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovileNext/Pods-MovileNext.debug.xcconfig"; sourceTree = "<group>"; };
 		3A01386BD45B3A920BE21BD9 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A4F92A6B9ED5C94A5D8B222 /* Pods_unit_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unit_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFFF0F5A28CF45EA835D876 /* MovileNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovileNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,10 +53,13 @@
 		CE5C32461B2DCCBF00F4628B /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		CE5C32481B2DD3D300F4628B /* ShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
 		CE5C324A1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE5C324C1B2E1ABF00F4628B /* TraktHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktHTTPClient.swift; sourceTree = "<group>"; };
 		CEF7F3A81B2CAE3400D6597B /* UIColor+MovileNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MovileNext.swift"; sourceTree = "<group>"; };
 		CEF7F3AA1B2CB01800D6597B /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		EDE6995C28A375EC39D60D15 /* Pods-MovileNext.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovileNext.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovileNext/Pods-MovileNext.release.xcconfig"; sourceTree = "<group>"; };
 		F015A11F4273648E857C0B5D /* Storyboards.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		F39A4C77D01B26AACABA55B1 /* Pods_MovileNext.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileNext.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8FCCCFE52578BC578E6A60 /* Foundation.framework in Frameworks */,
+				3B115B30BCA7534676ECFE18 /* Pods_MovileNext.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +139,7 @@
 				CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */,
 				CE5C32421B2DBEF200F4628B /* SeasonViewController.swift */,
 				CE5C32481B2DD3D300F4628B /* ShowsViewController.swift */,
+				CE5C324C1B2E1ABF00F4628B /* TraktHTTPClient.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +225,7 @@
 			children = (
 				BBFE0D06B81D58A06A582E0E /* iOS */,
 				3A4F92A6B9ED5C94A5D8B222 /* Pods_unit_tests.framework */,
+				F39A4C77D01B26AACABA55B1 /* Pods_MovileNext.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,6 +251,8 @@
 			children = (
 				8C249837A0EB2A802140DB64 /* Pods-unit_tests.release.xcconfig */,
 				6423F25ADE25FFB0E3688ECF /* Pods-unit_tests.debug.xcconfig */,
+				EDE6995C28A375EC39D60D15 /* Pods-MovileNext.release.xcconfig */,
+				1FB3289496772B1D744FD8CC /* Pods-MovileNext.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -282,10 +293,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98CE0DE38E2761D2E62CB863 /* Build configuration list for PBXNativeTarget "MovileNext" */;
 			buildPhases = (
+				311B1293B418C9D5ADEFD8E2 /* Check Pods Manifest.lock */,
 				CEF7F3AE1B2CBB1800D6597B /* Natalie Script */,
 				0EDBF29C4A9C1A3190FB0162 /* Sources */,
 				DFEE15C80CD81B36A3D6E141 /* Frameworks */,
 				3A2EDB80CF4B4BFABCE71C68 /* Resources */,
+				354995D6B56ACFEF997508B1 /* Embed Pods Frameworks */,
+				F2C553E9FFD1DD578CA7AD4F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,6 +372,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		311B1293B418C9D5ADEFD8E2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		354995D6B56ACFEF997508B1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovileNext/Pods-MovileNext-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A082E719B70560F201ED982E /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,6 +446,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F2C553E9FFD1DD578CA7AD4F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MovileNext/Pods-MovileNext-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -410,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5C32471B2DCCBF00F4628B /* EpisodeTableViewCell.swift in Sources */,
+				CE5C324D1B2E1ABF00F4628B /* TraktHTTPClient.swift in Sources */,
 				CE5C32491B2DD3D300F4628B /* ShowsViewController.swift in Sources */,
 				CEF7F3AB1B2CB01800D6597B /* CustomNavigationController.swift in Sources */,
 				CE5C324B1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift in Sources */,
@@ -443,6 +503,7 @@
 /* Begin XCBuildConfiguration section */
 		013FAE329B470369ECA13D2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDE6995C28A375EC39D60D15 /* Pods-MovileNext.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -558,6 +619,7 @@
 		};
 		659D1F3AB6B1FDC8C69B9CE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB3289496772B1D744FD8CC /* Pods-MovileNext.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

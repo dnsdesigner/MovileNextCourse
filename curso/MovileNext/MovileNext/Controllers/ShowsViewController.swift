@@ -61,11 +61,11 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let newSpace = floor((collectionView.bounds.width - (flowLayout.itemSize.width * maxPerRow)) / 4)
         //let newSpace = floor(((collectionView.bounds.width - usedSpace)) / 6)
         
-        println("Used Space: \(usedSpace)| Item Size: \(itemSize) | Max Per Row: \(maxPerRow)")
+        /*println("Used Space: \(usedSpace)| Item Size: \(itemSize) | Max Per Row: \(maxPerRow)")
         println("Border: \(border)| FlowLayoutInsetsLeft: \(flowLayout.sectionInset.left)")
         println("FlowLayoutInsetsRight: \(flowLayout.sectionInset.right)")
         println("Collection Width: \(collectionView.bounds.width) | Item Size: \(flowLayout.itemSize.width)")
-        println("NewSpace: \(newSpace)")
+        println("NewSpace: \(newSpace)")*/
         
         //return UIEdgeInsets(top: flowLayout.sectionInset.top, left: space, bottom: flowLayout.sectionInset.bottom, right: space)
         return UIEdgeInsets(top: newSpace, left: newSpace, bottom: newSpace, right: newSpace)

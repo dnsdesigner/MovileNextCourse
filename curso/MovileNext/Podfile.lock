@@ -1,13 +1,45 @@
 PODS:
+  - Alamofire (1.2.2)
+  - Argo (1.0.1):
+    - Box (~> 1.2)
+    - Runes (~> 1.2)
+  - Box (1.2.0)
+  - ISO8601DateFormatter (0.7)
   - Nimble (0.4.2)
   - OHHTTPStubs (4.0.2)
+  - Result (0.4.3):
+    - Box (~> 1.2)
+  - Runes (1.2.2)
+  - TraktModels (0.1.0):
+    - Argo (~> 1.0)
+    - ISO8601DateFormatter (~> 0.7)
 
 DEPENDENCIES:
+  - Alamofire
+  - Argo
   - Nimble
   - OHHTTPStubs
+  - Result
+  - TraktModels (from `https://github.com/marcelofabri/TraktModels.git`)
+
+EXTERNAL SOURCES:
+  TraktModels:
+    :git: https://github.com/marcelofabri/TraktModels.git
+
+CHECKOUT OPTIONS:
+  TraktModels:
+    :commit: eb6071a7843b95ed38df4910499298b32efb6089
+    :git: https://github.com/marcelofabri/TraktModels.git
 
 SPEC CHECKSUMS:
+  Alamofire: 11a6022f5089887d92ffb5a3014c97a0a915ab98
+  Argo: 0adbc4433ad29e202875355610d1a03a74928155
+  Box: 3345df1dee5c8cd639a663e368427c51f931d095
+  ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
   Nimble: 49b7a7da8919f42823d37c6d68cc6d15a7009f32
   OHHTTPStubs: dbd1957d414659783e07b49c961940b7564c23d9
+  Result: 910839ce03c5c573ec94026678b7cecb69ee862e
+  Runes: 90c9bba2be981c3777ac490aea0fc0c1acff0f97
+  TraktModels: 88e18369fe6e9629f9a44be7694b1cd2d69a90b7
 
 COCOAPODS: 0.37.1
