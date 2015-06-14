@@ -32,6 +32,9 @@ class EpisodeViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.titleLabel.text = "Pilot"
         
+        // Setando imagem
+        //coverImageView.image = UIImage(named: "bg")
+        
         // Remover margem do textview
         descriptionTextView.textContainer.lineFragmentPadding = 0
         descriptionTextView.textContainerInset = UIEdgeInsetsZero

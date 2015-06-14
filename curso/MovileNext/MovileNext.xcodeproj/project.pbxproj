@@ -13,6 +13,8 @@
 		A9361B0A207A551A26A3515A /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015A11F4273648E857C0B5D /* Storyboards.swift */; };
 		AC8FCCCFE52578BC578E6A60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981D578DC870667A53A9883D /* Foundation.framework */; };
 		C8BD9537CCD705B634A171E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A01386BD45B3A920BE21BD9 /* Images.xcassets */; };
+		CE5C32431B2DBEF200F4628B /* SeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C32421B2DBEF200F4628B /* SeasonViewController.swift */; };
+		CE5C32471B2DCCBF00F4628B /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C32461B2DCCBF00F4628B /* EpisodeTableViewCell.swift */; };
 		CEF7F3A91B2CAE3400D6597B /* UIColor+MovileNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3A81B2CAE3400D6597B /* UIColor+MovileNext.swift */; };
 		CEF7F3AB1B2CB01800D6597B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3AA1B2CB01800D6597B /* CustomNavigationController.swift */; };
 		CEF7F3AD1B2CB12700D6597B /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */; };
@@ -42,6 +44,8 @@
 		9FDB12629B6F0B869445B7A9 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B139E4C54E434002F6C4C533 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E6AA2548E7C5721A35BA07 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		CE5C32421B2DBEF200F4628B /* SeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonViewController.swift; sourceTree = "<group>"; };
+		CE5C32461B2DCCBF00F4628B /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		CEF7F3A81B2CAE3400D6597B /* UIColor+MovileNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MovileNext.swift"; sourceTree = "<group>"; };
 		CEF7F3AA1B2CB01800D6597B /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				F015A11F4273648E857C0B5D /* Storyboards.swift */,
 				CEF7F3AA1B2CB01800D6597B /* CustomNavigationController.swift */,
 				CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */,
+				CE5C32421B2DBEF200F4628B /* SeasonViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 		9D59D8103D37A2E50D841BD0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE5C32461B2DCCBF00F4628B /* EpisodeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -397,11 +403,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5C32471B2DCCBF00F4628B /* EpisodeTableViewCell.swift in Sources */,
 				CEF7F3AB1B2CB01800D6597B /* CustomNavigationController.swift in Sources */,
 				CEF7F3AD1B2CB12700D6597B /* EpisodeViewController.swift in Sources */,
 				D702731E2099D0747D27D160 /* AppDelegate.swift in Sources */,
 				A9361B0A207A551A26A3515A /* Storyboards.swift in Sources */,
 				1F0FD604735A8998895F2ECC /* Main.storyboard in Sources */,
+				CE5C32431B2DBEF200F4628B /* SeasonViewController.swift in Sources */,
 				CEF7F3A91B2CAE3400D6597B /* UIColor+MovileNext.swift in Sources */,
 				9F04F72A38FF22B3B76F4CFD /* LaunchScreen.xib in Sources */,
 			);
@@ -429,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -543,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
