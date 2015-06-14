@@ -15,6 +15,8 @@
 		C8BD9537CCD705B634A171E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A01386BD45B3A920BE21BD9 /* Images.xcassets */; };
 		CE5C32431B2DBEF200F4628B /* SeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C32421B2DBEF200F4628B /* SeasonViewController.swift */; };
 		CE5C32471B2DCCBF00F4628B /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C32461B2DCCBF00F4628B /* EpisodeTableViewCell.swift */; };
+		CE5C32491B2DD3D300F4628B /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C32481B2DD3D300F4628B /* ShowsViewController.swift */; };
+		CE5C324B1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C324A1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift */; };
 		CEF7F3A91B2CAE3400D6597B /* UIColor+MovileNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3A81B2CAE3400D6597B /* UIColor+MovileNext.swift */; };
 		CEF7F3AB1B2CB01800D6597B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3AA1B2CB01800D6597B /* CustomNavigationController.swift */; };
 		CEF7F3AD1B2CB12700D6597B /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */; };
@@ -46,6 +48,8 @@
 		C2E6AA2548E7C5721A35BA07 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		CE5C32421B2DBEF200F4628B /* SeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonViewController.swift; sourceTree = "<group>"; };
 		CE5C32461B2DCCBF00F4628B /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		CE5C32481B2DD3D300F4628B /* ShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
+		CE5C324A1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEF7F3A81B2CAE3400D6597B /* UIColor+MovileNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MovileNext.swift"; sourceTree = "<group>"; };
 		CEF7F3AA1B2CB01800D6597B /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				CEF7F3AA1B2CB01800D6597B /* CustomNavigationController.swift */,
 				CEF7F3AC1B2CB12700D6597B /* EpisodeViewController.swift */,
 				CE5C32421B2DBEF200F4628B /* SeasonViewController.swift */,
+				CE5C32481B2DD3D300F4628B /* ShowsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5C32461B2DCCBF00F4628B /* EpisodeTableViewCell.swift */,
+				CE5C324A1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -404,7 +410,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5C32471B2DCCBF00F4628B /* EpisodeTableViewCell.swift in Sources */,
+				CE5C32491B2DD3D300F4628B /* ShowsViewController.swift in Sources */,
 				CEF7F3AB1B2CB01800D6597B /* CustomNavigationController.swift in Sources */,
+				CE5C324B1B2DDA1F00F4628B /* ShowsCollectionViewCell.swift in Sources */,
 				CEF7F3AD1B2CB12700D6597B /* EpisodeViewController.swift in Sources */,
 				D702731E2099D0747D27D160 /* AppDelegate.swift in Sources */,
 				A9361B0A207A551A26A3515A /* Storyboards.swift in Sources */,
