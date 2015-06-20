@@ -16,6 +16,7 @@
 		CE02BCA81B35A3BD008F2740 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BCA71B35A3BD008F2740 /* TableViewController.swift */; };
 		CE02BCAA1B35A4B2008F2740 /* new-pods.json in Resources */ = {isa = PBXBuildFile; fileRef = CE02BCA91B35A4B2008F2740 /* new-pods.json */; };
 		CE02BCAC1B35BA3B008F2740 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BCAB1B35BA3B008F2740 /* MainTableViewCell.swift */; };
+		CEC82A471B35F60C00610929 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC82A461B35F60C00610929 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		CE02BCA71B35A3BD008F2740 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CE02BCA91B35A4B2008F2740 /* new-pods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "new-pods.json"; sourceTree = "<group>"; };
 		CE02BCAB1B35BA3B008F2740 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		CEC82A461B35F60C00610929 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC82A471B35F60C00610929 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +68,7 @@
 		CE02BC771B35A1A3008F2740 = {
 			isa = PBXGroup;
 			children = (
+				CEC82A461B35F60C00610929 /* SafariServices.framework */,
 				CE02BC821B35A1A3008F2740 /* Exercicio2006 */,
 				CE02BC981B35A1A3008F2740 /* Exercicio2006Tests */,
 				CE02BC811B35A1A3008F2740 /* Products */,
@@ -421,6 +425,7 @@
 				CE02BCA11B35A1A3008F2740 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE02BCA21B35A1A3008F2740 /* Build configuration list for PBXNativeTarget "Exercicio2006Tests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +434,7 @@
 				CE02BCA41B35A1A3008F2740 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

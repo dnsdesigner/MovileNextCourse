@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 struct Entry {
     let title: String
@@ -111,23 +112,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         /*// Date comparision to compare current date and end date.
         var dateComparisionResult:NSComparisonResult = today.compare(date)*/
         
-        println("Today: \(todayString) | Entrie: \(entrieDateString)")
+        //println("Today: \(todayString) | Entrie: \(entrieDateString)")
         
         if dateComparisionResult == NSComparisonResult.OrderedAscending
         {
             // Current date is smaller than end date.
-            println("Current date is smaller")
+            // println("Current date is smaller")
         }
         else if dateComparisionResult == NSComparisonResult.OrderedDescending
         {
             // Current date is greater than end date.
-            println("Current date is greater")
+            //println("Current date is greater")
             color = UIColor.lightGrayColor()
         }
         else if dateComparisionResult == NSComparisonResult.OrderedSame
         {
             // Current date and end date are same.
-            println("Current date are same")
+            //println("Current date are same")
             color = UIColor.blueColor()
         }
         
@@ -165,12 +166,49 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         UIApplication.sharedApplication().openURL(entrie.link)
     }
     
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        
+        let entrie = self.entriesArray[indexPath.row]
+        
+        var addToReadingList = UITableViewRowAction(style: .Normal, title: "Add to Reading List") { (action, indexPath) -> Void in
+            tableView.editing = false
+            println("Add to Reading List")
+            
+            var readList = SSReadingList.defaultReadingList()
+            var status = readList.addReadingListItemWithURL(entrie.link, title: entrie.title, previewText: entrie.contentSnippet, error: nil)
+            
+            if status {
+                println("Added URL Succesfully")
+            } else {
+                println("Failed to add URL")
+            }
+        }
+        
+        addToReadingList.backgroundColor = UIColor.blueColor()
+        
+        var addToFavorite = UITableViewRowAction(style: .Default, title: "Star") { (action, indexPath) -> Void in
+            tableView.editing = false
+            println("Add To Favorite List")
+            
+        }
+        
+        addToFavorite.backgroundColor = UIColor.orangeColor()
+        
+        return[addToFavorite, addToReadingList]
+    }
+    
+    
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            println("Delete touch")
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            
+            println("Insert touch")
         }
     }
     
