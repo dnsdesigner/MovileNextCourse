@@ -75,10 +75,10 @@ extension Show: Decodable {
             <*> j <|? "runtime"
             <*> j <|? "network"
             <*> j <|? "country"
-            <*> j <|? "trailer"  >>- JSONParseUtils.parseURL
+            <*> (j <|? "trailer" >>- JSONParseUtils.parseURL)
         
         let s2 = s1
-            <*> j <|? "homepage"  >>- JSONParseUtils.parseURL
+            <*> (j <|? "homepage" >>- JSONParseUtils.parseURL)
             <*> j <|? "status"
             <*> j <|? "rating"
             <*> j <|? "votes"
@@ -88,10 +88,10 @@ extension Show: Decodable {
         return s2
             <*> j <|? ["images", "fanart"]
             <*> j <|? ["images", "poster"]
-            <*> j <|? ["images", "logo", "full"]  >>- JSONParseUtils.parseURL
-            <*> j <|? ["images", "clearart", "full"]  >>- JSONParseUtils.parseURL
-            <*> j <|? ["images", "banner", "full"]  >>- JSONParseUtils.parseURL
-            <*> j <|? ["images", "thumb", "full"]  >>- JSONParseUtils.parseURL
+            <*> (j <|? ["images", "logo", "full"] >>- JSONParseUtils.parseURL)
+            <*> (j <|? ["images", "clearart", "full"] >>- JSONParseUtils.parseURL)
+            <*> (j <|? ["images", "banner", "full"] >>- JSONParseUtils.parseURL)
+            <*> (j <|? ["images", "thumb", "full"] >>- JSONParseUtils.parseURL)
     }
 }
 

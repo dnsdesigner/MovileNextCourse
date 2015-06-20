@@ -67,9 +67,9 @@ extension ImagesURLs: Decodable {
     
     public static func decode(j: JSON) -> Decoded<ImagesURLs> {
         return ImagesURLs.create
-            <^> j <|? "full" >>- JSONParseUtils.parseURL
-            <*> j <|? "medium" >>- JSONParseUtils.parseURL
-            <*> j <|? "thumb" >>- JSONParseUtils.parseURL
+            <^> (j <|? "full" >>- JSONParseUtils.parseURL)
+            <*> (j <|? "medium" >>- JSONParseUtils.parseURL)
+            <*> (j <|? "thumb" >>- JSONParseUtils.parseURL)
     }
 }
 

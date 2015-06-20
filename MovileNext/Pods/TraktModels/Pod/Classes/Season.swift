@@ -40,6 +40,6 @@ extension Season: Decodable {
             <*> j <|? "aired_episodes"
             <*> j <|? "overview"
             <*> j <|? ["images", "poster"]
-            <*> j <|? ["images", "thumb", "full"]  >>- JSONParseUtils.parseURL
+            <*> (j <|? ["images", "thumb", "full"]  >>- JSONParseUtils.parseURL)
     }
 }
