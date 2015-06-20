@@ -11,8 +11,6 @@ import SafariServices
 
 struct Entry {
     let title: String
-    //let link: NSURL
-    //let publishedDate: NSDate
     let link: NSURL
     let publishedDate: NSDate
     let contentSnippet: String
@@ -48,6 +46,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     var jsonData:NSArray!
     var entriesArray = [Entry]()
+    var favoriteArray = Set<Int>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +61,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             if entry != nil {
                 self.entriesArray.append(entry!)
             }
-            
         }
         
         //println("Array Size: \(self.entriesArray.count)")
+        
+        var myString: String = "hello hi";
+        var myStringArr = myString.componentsSeparatedByString(" ")
         
     }
     
@@ -95,7 +96,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         var color:UIColor = UIColor.lightGrayColor()
         
-        let formatter = NSDateFormatter()
+        if NSCalendar.currentCalendar().isDateInToday(date) {
+            color = UIColor.blueColor()
+        } else {
+            color = UIColor.lightGrayColor()
+        }
+        
+        /*let formatter = NSDateFormatter()
         //formatter.dateFormat = "EEE, d MMM yyyy HH:mm:ss Z"
         formatter.dateFormat = "d MMM yyyy"
         formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
@@ -130,7 +137,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             // Current date and end date are same.
             //println("Current date are same")
             color = UIColor.blueColor()
-        }
+        }*/
         
         return color
     }
@@ -147,8 +154,28 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         var entrie = self.entriesArray[indexPath.row]
         
-        cell.titleLabel.textColor = self.textColor(entrie.publishedDate)
-        cell.contentSnippetLabel.textColor = self.textColor(entrie.publishedDate)
+        if (favoriteArray.contains(indexPath.row)) {
+            
+            if self.textColor(entrie.publishedDate) == UIColor.blueColor() {
+                
+                cell.titleLabel.textColor = self.textColor(entrie.publishedDate)
+                cell.contentSnippetLabel.textColor = self.textColor(entrie.publishedDate)
+                
+            } else {
+                
+                cell.titleLabel.textColor = UIColor.blackColor()
+                cell.contentSnippetLabel.textColor = UIColor.blackColor()
+            }
+            
+            cell.titleLabel.font = UIFont.boldSystemFontOfSize(17)
+            cell.contentSnippetLabel.font = UIFont.boldSystemFontOfSize(17)
+            
+        } else {
+            
+            cell.titleLabel.textColor = self.textColor(entrie.publishedDate)
+            cell.contentSnippetLabel.textColor = self.textColor(entrie.publishedDate)
+            
+        }
         
         cell.titleLabel.text = entrie.title
         cell.contentSnippetLabel.text = entrie.contentSnippet
@@ -190,10 +217,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             tableView.editing = false
             println("Add To Favorite List")
             
+            self.favoriteArray.insert(indexPath.row)
+            println("Favoritos: \(self.favoriteArray)")
+            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         }
         
         addToFavorite.backgroundColor = UIColor.orangeColor()
-        
         return[addToFavorite, addToReadingList]
     }
     
@@ -202,12 +231,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if editingStyle == .Delete {
             // Delete the row from the data source
             //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            
             println("Delete touch")
             
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-            
             println("Insert touch")
         }
     }
