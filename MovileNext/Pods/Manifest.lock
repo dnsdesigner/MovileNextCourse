@@ -4,6 +4,7 @@ PODS:
     - Box (~> 1.2)
     - Runes (>= 1.2.2)
   - Box (1.2.2)
+  - HanekeSwift (0.9.1)
   - ISO8601DateFormatter (0.7)
   - Nimble (0.4.2)
   - OHHTTPStubs (4.0.2)
@@ -18,6 +19,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Argo
+  - HanekeSwift
   - Nimble
   - OHHTTPStubs
   - Result
@@ -36,6 +38,7 @@ SPEC CHECKSUMS:
   Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
   Argo: 480471806cf73d4074fcb94751482cd6c139ba3c
   Box: a92e8aa4c099e6bc0733829665caf9e668ef53b8
+  HanekeSwift: 50d37bfbc4432edc649167e538c259feccb4a2bb
   ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
   Nimble: 49b7a7da8919f42823d37c6d68cc6d15a7009f32
   OHHTTPStubs: dbd1957d414659783e07b49c961940b7564c23d9

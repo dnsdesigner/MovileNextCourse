@@ -7,16 +7,37 @@
 //
 
 import UIKit
+import Alamofire
+import Result
+import TraktModels
+import Argo
 
 class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    let traktAPI = TraktHTTPClient()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        /*// Testando API Trackt getShow
+        traktAPI.getShow("game-of-thrones") { result in
+            
+            // Retorna um enum
+            if let title = result.value?.title {
+                println("Title: \(title)")
+            }
+        }
+        
+        // Testando API Trakt getEpisode
+        traktAPI.getEpisode("game-of-thrones", season: 1, episodeNumber: 1) { (result) -> Void in
+            if let overview = result.value?.overview {
+                println("Overview: \(overview)")
+            }
+        }*/
+        
+        traktAPI.getPopularShows()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,16 +45,6 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 11

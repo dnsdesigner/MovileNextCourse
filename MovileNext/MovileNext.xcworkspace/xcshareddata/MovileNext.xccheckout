@@ -14,11 +14,11 @@
 		<string>https://github.com/dnsdesigner/MovileNextCourse.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>curso/MovileNext/MovileNext.xcworkspace</string>
+	<string>MovileNext/MovileNext.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9EDEF712ABE0C2711A8D61BBB9A479E7CAB57897</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/dnsdesigner/MovileNextCourse.git</string>
