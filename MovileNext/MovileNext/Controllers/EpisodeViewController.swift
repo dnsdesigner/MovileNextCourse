@@ -2,7 +2,7 @@
 //  EpisodeViewController.swift
 //  MovileNext
 //
-//  Created by User on 13/06/15.
+//  Created by Dennis de Oliveira on 25/06/15.
 //  Copyright (c) 2015 Movile. All rights reserved.
 //
 
@@ -10,9 +10,20 @@ import UIKit
 
 class EpisodeViewController: UIViewController {
     
+    
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var overviewTextView: UITextView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Zerar espaçamento da textView
+        overviewTextView.textContainer.lineFragmentPadding = 0
+        overviewTextView.textContainerInset = UIEdgeInsetsZero
+    }
+    
+    // MARK: Actions
     
     @IBAction func sharePressed(sender: UIBarButtonItem) {
         
@@ -22,38 +33,8 @@ class EpisodeViewController: UIViewController {
             
             presentViewController(vc, animated: true, completion: nil)
         }
-            
-        println("pressed")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.titleLabel.text = "Pilot"
         
-        // Setando imagem
-        //coverImageView.image = UIImage(named: "bg")
+        println("share pressed")
         
-        // Remover margem do textview
-        descriptionTextView.textContainer.lineFragmentPadding = 0
-        descriptionTextView.textContainerInset = UIEdgeInsetsZero
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

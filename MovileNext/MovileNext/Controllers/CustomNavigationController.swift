@@ -2,17 +2,17 @@
 //  CustomNavigationController.swift
 //  MovileNext
 //
-//  Created by User on 13/06/15.
+//  Created by Dennis de Oliveira on 25/06/15.
 //  Copyright (c) 2015 Movile. All rights reserved.
 //
 
 import UIKit
 
 class CustomNavigationController: UINavigationController {
-
-    // Definindo o estilo da status bar
+    
+    // Definindo o status bar para branco
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-
+    
 }

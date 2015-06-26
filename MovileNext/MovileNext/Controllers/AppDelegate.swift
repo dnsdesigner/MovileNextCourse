@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MovileNext
 //
-//  Created by User on 6/13/15
+//  Created by Dennis de Oliveira on 6/25/15
 //  Copyright (c) 2015 Movile. All rights reserved.
 //
 
@@ -24,5 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.tintColor = UIColor.whiteColor()
         
         return true
+        
     }
+    
 }

@@ -2,7 +2,7 @@
 //  SeasonViewController.swift
 //  MovileNext
 //
-//  Created by User on 14/06/15.
+//  Created by Dennis de Oliveira on 25/06/15.
 //  Copyright (c) 2015 Movile. All rights reserved.
 //
 
@@ -23,18 +23,22 @@ class SeasonViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: TableView Delegates
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 15
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let indentifier = Reusable.EpisodeCell.identifier!
-        let cell = tableView.dequeueReusableCellWithIdentifier(indentifier, forIndexPath: indexPath) as! UITableViewCell
+        let identifier = Reusable.EpisodeCell.identifier!
+        let cell = self.tableView.dequeueReusableCellWithIdentifier(identifier) as! EpisodeTableViewCell
         
+        // Setando textos apenas para marcar
         cell.textLabel?.text = "S01E01 - S\(indexPath.section)R\(indexPath.row)"
         cell.detailTextLabel?.text = "Winter Is Coming"
         
         return cell
     }
-
+    
 }

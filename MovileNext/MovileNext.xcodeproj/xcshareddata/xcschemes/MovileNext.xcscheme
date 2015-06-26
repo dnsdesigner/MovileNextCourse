@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6736C10F6EF8ACE04E545F15"
+               BlueprintIdentifier = "869CC264F5B0D99FAB6961E2"
                BuildableName = "MovileNext.app"
                BlueprintName = "MovileNext"
                ReferencedContainer = "container:MovileNext.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "075E3A0EDAD109238F80320F"
+               BlueprintIdentifier = "2A87EEF1FB31DF718F47916D"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
                ReferencedContainer = "container:MovileNext.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6736C10F6EF8ACE04E545F15"
+            BlueprintIdentifier = "869CC264F5B0D99FAB6961E2"
             BuildableName = "MovileNext.app"
             BlueprintName = "MovileNext"
             ReferencedContainer = "container:MovileNext.xcodeproj">
@@ -62,7 +62,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6736C10F6EF8ACE04E545F15"
+            BlueprintIdentifier = "869CC264F5B0D99FAB6961E2"
             BuildableName = "MovileNext.app"
             BlueprintName = "MovileNext"
             ReferencedContainer = "container:MovileNext.xcodeproj">
@@ -81,7 +81,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6736C10F6EF8ACE04E545F15"
+            BlueprintIdentifier = "869CC264F5B0D99FAB6961E2"
             BuildableName = "MovileNext.app"
             BlueprintName = "MovileNext"
             ReferencedContainer = "container:MovileNext.xcodeproj">

@@ -15,8 +15,8 @@ target 'MovileNext', :exclusive => true do
 end
 
 target :unit_tests, :exclusive => true do
-  link_with 'UnitTests'
-  pod 'Nimble'
-  pod 'OHHTTPStubs'
+    link_with 'UnitTests'
+    pod 'Nimble'
+    pod 'OHHTTPStubs'
 end
 
