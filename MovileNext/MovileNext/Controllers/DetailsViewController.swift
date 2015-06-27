@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import TraktModels
 
 class DetailsViewController: UIViewController {
+    
+    
+    
+    @IBOutlet weak var detailsTextView: UITextView!
+    var show:Show?
 
     override func viewDidLoad() {
         super.viewDidLoad()

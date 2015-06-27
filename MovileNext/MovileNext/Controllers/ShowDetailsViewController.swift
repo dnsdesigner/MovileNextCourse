@@ -64,6 +64,9 @@ class ShowDetailsViewController: UIViewController {
             let showGenres = segue.destinationViewController as! GenresViewController
             showGenres.show = self.show
             
+        } else if segue.identifier == "segueShowDetails" {
+            let showDetails = segue.destinationViewController as! DetailsViewController
+            showDetails.show = self.show
         }
         
     }
