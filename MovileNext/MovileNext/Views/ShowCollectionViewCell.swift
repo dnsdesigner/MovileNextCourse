@@ -19,12 +19,13 @@ class ShowCollectionViewCell: UICollectionViewCell {
         
         let placeholder = UIImage(named: "poster")
         
-        if let url = show.poster?.fullImageURL {
+        /*if let url = show.poster?.mediumImageURL {
             self.posterImageView.hnk_setImageFromURL(url, placeholder: placeholder)
         } else {
             self.posterImageView.image = placeholder
-        }
+        }*/
         
+        self.posterImageView.image = placeholder
         self.titleLabel.text = show.title
     }
     

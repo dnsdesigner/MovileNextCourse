@@ -145,6 +145,100 @@ extension UITableViewController {
 
 //MARK: - EpisodeViewController
 
+//MARK: - GenresViewController
+
+//MARK: - DetailsViewController
+
+//MARK: - ShowDetailsViewController
+extension UIStoryboardSegue {
+    func selection() -> ShowDetailsViewController.Segue? {
+        if let identifier = self.identifier {
+            return ShowDetailsViewController.Segue(rawValue: identifier)
+        }
+        return nil
+    }
+}
+
+extension ShowDetailsViewController { 
+
+    enum Segue: String, Printable, SegueProtocol {
+        case segueShowOverview = "segueShowOverview"
+        case segueShowSeasons = "segueShowSeasons"
+        case segueShowGenres = "segueShowGenres"
+        case segueShowDetails = "segueShowDetails"
+
+        var kind: SegueKind? {
+            switch (self) {
+            case segueShowOverview:
+                return SegueKind(rawValue: "show")
+            case segueShowSeasons:
+                return SegueKind(rawValue: "show")
+            case segueShowGenres:
+                return SegueKind(rawValue: "show")
+            case segueShowDetails:
+                return SegueKind(rawValue: "show")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var destination: UIViewController.Type? {
+            switch (self) {
+            case segueShowOverview:
+                return OverviewViewController.self
+            case segueShowSeasons:
+                return SeasonListViewController.self
+            case segueShowGenres:
+                return GenresViewController.self
+            case segueShowDetails:
+                return DetailsViewController.self
+            default:
+                assertionFailure("Unknown destination")
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
+
+//MARK: - SeasonListViewController
+extension SeasonListViewController { 
+
+    enum Reusable: String, Printable, ReusableProtocol {
+        case SeasonCell = "SeasonCell"
+
+        var kind: ReusableKind? {
+            switch (self) {
+            case SeasonCell:
+                return ReusableKind(rawValue: "tableViewCell")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var viewType: UIView.Type? {
+            switch (self) {
+            case SeasonCell:
+                return SeasonTableViewCell.self
+            default:
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
+
+
+//MARK: - OverviewViewController
+
 //MARK: - SeasonViewController
 extension SeasonViewController { 
 
@@ -180,6 +274,45 @@ extension SeasonViewController {
 //MARK: - CustomNavigationController
 
 //MARK: - ShowsViewController
+extension UIStoryboardSegue {
+    func selection() -> ShowsViewController.Segue? {
+        if let identifier = self.identifier {
+            return ShowsViewController.Segue(rawValue: identifier)
+        }
+        return nil
+    }
+}
+
+extension ShowsViewController { 
+
+    enum Segue: String, Printable, SegueProtocol {
+        case segueShowDetails = "segueShowDetails"
+
+        var kind: SegueKind? {
+            switch (self) {
+            case segueShowDetails:
+                return SegueKind(rawValue: "show")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var destination: UIViewController.Type? {
+            switch (self) {
+            case segueShowDetails:
+                return ShowDetailsViewController.self
+            default:
+                assertionFailure("Unknown destination")
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
 extension ShowsViewController { 
 
     enum Reusable: String, Printable, ReusableProtocol {

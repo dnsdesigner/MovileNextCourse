@@ -73,4 +73,24 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         return UIEdgeInsets(top: newSpace, left: newSpace, bottom: newSpace, right: newSpace)
     }
+    
+    
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let cell = sender as! UICollectionViewCell
+        let indexPath = self.collectionView.indexPathForCell(cell)!
+        
+        if segue.identifier == "segueShowDetails" {
+            
+            let showDetails = segue.destinationViewController as! ShowDetailsViewController
+            showDetails.show = self.shows?[indexPath.row]
+            
+            println(self.shows![indexPath.row].title)
+            
+        }
+    }
+
 }

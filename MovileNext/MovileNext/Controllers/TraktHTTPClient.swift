@@ -34,11 +34,11 @@ private enum Router: URLRequestConvertible {
             case .Episode(let showId, let season, let episodeNumber):
                 return ("shows/\(showId)/seasons/\(season)/episodes/\(episodeNumber)", ["extended": "images,full"], .GET)
             case .Episodes(let showId, let season):
-                return ("shows/\(showId)/seasons/\(season)",["extended" : "images, full, episodes"], .GET)
+                return ("shows/\(showId)/seasons/\(season)",["extended" : "images,full,episodes"], .GET)
             case .Popular:
                 return ("shows/popular", ["extended": "images,full"], .GET)
             case .Seasons(let showId):
-                return ("shows/\(showId)/seasons", ["extended" : "images, full"], .GET)
+                return ("shows/\(showId)/seasons", ["extended" : "images,full"], .GET)
             }
             
             }()

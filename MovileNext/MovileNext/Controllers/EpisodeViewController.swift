@@ -21,6 +21,10 @@ class EpisodeViewController: UIViewController {
         // Zerar espaçamento da textView
         overviewTextView.textContainer.lineFragmentPadding = 0
         overviewTextView.textContainerInset = UIEdgeInsetsZero
+        
+        // Escurecer imagem
+        var placeHolder = UIImage(named: "bg")?.darkenImage()
+        self.coverImageView.image = placeHolder
     }
     
     // MARK: Actions
