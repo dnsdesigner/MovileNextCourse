@@ -10,9 +10,10 @@ import UIKit
 import FloatRatingView
 
 
-class OverviewViewController: UIViewController {
+class OverviewViewController: UIViewController, ShowInternalViewController {
     
     @IBOutlet weak var overviewTextView: UITextView!
+    
     var overview:String = ""
     
     override func viewDidLoad() {
@@ -24,5 +25,13 @@ class OverviewViewController: UIViewController {
         
         self.overviewTextView.text = self.overview
         
+    }
+    
+    // Size Protocol
+    func intrinsicContentSize() -> CGSize {
+        
+        var overviewHeight = self.overviewTextView.intrinsicContentSize().height + 39
+        
+        return CGSize(width: self.overviewTextView.intrinsicContentSize().width, height: overviewHeight)
     }
 }

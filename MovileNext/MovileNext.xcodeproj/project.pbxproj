@@ -29,6 +29,7 @@
 		CE201DA71B3EF8F20041E5E7 /* SeasonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE201DA61B3EF8F20041E5E7 /* SeasonTableViewCell.swift */; };
 		CE201DA91B3F15320041E5E7 /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE201DA81B3F15320041E5E7 /* GenresViewController.swift */; };
 		CE201DAB1B3F181E0041E5E7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE201DAA1B3F181E0041E5E7 /* DetailsViewController.swift */; };
+		CE54ADDB1B4048C700C9573C /* ShowInternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54ADDA1B4048C700C9573C /* ShowInternalViewController.swift */; };
 		CF6C2F3CB2FC3102C0AC5603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AC2A6F89C4B1EA75A5544 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		CE201DA61B3EF8F20041E5E7 /* SeasonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTableViewCell.swift; sourceTree = "<group>"; };
 		CE201DA81B3F15320041E5E7 /* GenresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
 		CE201DAA1B3F181E0041E5E7 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		CE54ADDA1B4048C700C9573C /* ShowInternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowInternalViewController.swift; sourceTree = "<group>"; };
 		CE8E08AF67809E0A9A904B5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F8215B78DD5D3AAE03BA4081 /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC153B6D09B36E01A755A437 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 		FBF693E36CCEC43AF0B7F8AC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				CE54ADDA1B4048C700C9573C /* ShowInternalViewController.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE54ADDB1B4048C700C9573C /* ShowInternalViewController.swift in Sources */,
 				CE201DA91B3F15320041E5E7 /* GenresViewController.swift in Sources */,
 				9567C49A1B3C86020069D66B /* ShowCollectionViewCell.swift in Sources */,
 				9567C49C1B3CC15D0069D66B /* TraktHTTPClient.swift in Sources */,

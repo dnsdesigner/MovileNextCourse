@@ -9,14 +9,31 @@
 import UIKit
 import TraktModels
 
-class SeasonListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol SeasonsListViewControllerDelegate: class {
+    func seasonsController(vc: SeasonListViewController, didSelectSeason season: Season)
+}
+
+class SeasonListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ShowInternalViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var showsSeasons:[Season]?
+    weak var delegate: SeasonsListViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        println("Listview carregada")
+        loadSeasons(showsSeasons)
+        
+        // Desabilitar rolagem
+        self.tableView.scrollEnabled = false
+    }
+    
+    func loadSeasons(seasons: [Season]?) {
+        self.showsSeasons = seasons
+        if isViewLoaded() {
+            tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +62,18 @@ class SeasonListViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    // MARK: ShowInternalProtocol
+    func intrinsicContentSize() -> CGSize {
+        return self.tableView.contentSize
+    }
     
-
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if let season = self.showsSeasons?[indexPath.row] {
+            self.delegate?.seasonsController(self, didSelectSeason: season)
+        }
+        
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
 }

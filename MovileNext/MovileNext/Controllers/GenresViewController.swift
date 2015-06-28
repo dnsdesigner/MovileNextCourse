@@ -10,7 +10,7 @@ import UIKit
 import TagListView
 import TraktModels
 
-class GenresViewController: UIViewController {
+class GenresViewController: UIViewController, ShowInternalViewController {
     
     @IBOutlet weak var genresView: TagListView!
     var show:Show?
@@ -29,6 +29,10 @@ class GenresViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func intrinsicContentSize() -> CGSize {
+        return self.genresView.intrinsicContentSize()
     }
     
 }
