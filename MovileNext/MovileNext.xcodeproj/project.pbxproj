@@ -30,6 +30,7 @@
 		CE201DA91B3F15320041E5E7 /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE201DA81B3F15320041E5E7 /* GenresViewController.swift */; };
 		CE201DAB1B3F181E0041E5E7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE201DAA1B3F181E0041E5E7 /* DetailsViewController.swift */; };
 		CE54ADDB1B4048C700C9573C /* ShowInternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54ADDA1B4048C700C9573C /* ShowInternalViewController.swift */; };
+		CE54ADDD1B408F6100C9573C /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54ADDC1B408F6100C9573C /* FavoritesManager.swift */; };
 		CF6C2F3CB2FC3102C0AC5603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AC2A6F89C4B1EA75A5544 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		CE201DA81B3F15320041E5E7 /* GenresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
 		CE201DAA1B3F181E0041E5E7 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CE54ADDA1B4048C700C9573C /* ShowInternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowInternalViewController.swift; sourceTree = "<group>"; };
+		CE54ADDC1B408F6100C9573C /* FavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		CE8E08AF67809E0A9A904B5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F8215B78DD5D3AAE03BA4081 /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC153B6D09B36E01A755A437 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		D62F81B169BC5E9D6CF394B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE54ADDC1B408F6100C9573C /* FavoritesManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				9567C4941B3C82F30069D66B /* EpisodeTableViewCell.swift in Sources */,
 				9567C4921B3C7D7E0069D66B /* EpisodeViewController.swift in Sources */,
 				CF6C2F3CB2FC3102C0AC5603 /* AppDelegate.swift in Sources */,
+				CE54ADDD1B408F6100C9573C /* FavoritesManager.swift in Sources */,
 				CE201D9F1B3EDB100041E5E7 /* UIImage+DarkenImage.swift in Sources */,
 				8430FF6F27BD2981E9170EA1 /* Storyboards.swift in Sources */,
 				5A2A062D21D107E7EA16A712 /* Main.storyboard in Sources */,

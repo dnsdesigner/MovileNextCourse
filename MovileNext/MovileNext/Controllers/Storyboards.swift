@@ -165,6 +165,7 @@ extension ShowDetailsViewController {
         case segueShowOverview = "segueShowOverview"
         case segueShowSeasons = "segueShowSeasons"
         case segueShowGenres = "segueShowGenres"
+        case segueSeasonsEpisodes = "segueSeasonsEpisodes"
 
         var kind: SegueKind? {
             switch (self) {
@@ -174,6 +175,8 @@ extension ShowDetailsViewController {
                 return SegueKind(rawValue: "embed")
             case segueShowGenres:
                 return SegueKind(rawValue: "embed")
+            case segueSeasonsEpisodes:
+                return SegueKind(rawValue: "show")
             default:
                 preconditionFailure("Invalid value")
                 break
@@ -188,6 +191,8 @@ extension ShowDetailsViewController {
                 return SeasonListViewController.self
             case segueShowGenres:
                 return GenresViewController.self
+            case segueSeasonsEpisodes:
+                return SeasonViewController.self
             default:
                 assertionFailure("Unknown destination")
                 return nil

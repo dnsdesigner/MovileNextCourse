@@ -25,6 +25,14 @@ class GenresViewController: UIViewController, ShowInternalViewController {
         }
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        // Obtendo tamanho da TagListView
+        println("Genres size: \(self.genresView.intrinsicContentSize().height)")
+        var totalHeight = self.genresView.intrinsicContentSize().height + 39
+        
+        println("Genres total Height: \(totalHeight)")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,7 +40,10 @@ class GenresViewController: UIViewController, ShowInternalViewController {
     }
     
     func intrinsicContentSize() -> CGSize {
-        return self.genresView.intrinsicContentSize()
+        
+        var totalHeight = self.genresView.intrinsicContentSize().height + 39
+        
+        return CGSize(width: self.view.frame.width, height: totalHeight)
     }
     
 }

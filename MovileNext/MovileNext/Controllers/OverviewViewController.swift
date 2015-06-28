@@ -27,6 +27,11 @@ class OverviewViewController: UIViewController, ShowInternalViewController {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        // Obtendo tamanho do overview
+        println("Overview: \(self.overviewTextView.intrinsicContentSize().height)")
+    }
+    
     // Size Protocol
     func intrinsicContentSize() -> CGSize {
         

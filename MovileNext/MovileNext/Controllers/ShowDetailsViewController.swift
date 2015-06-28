@@ -16,13 +16,18 @@ class ShowDetailsViewController: UIViewController, SeasonsListViewControllerDele
     var showOverview: String?
     var showSeasons:[Season]?
     @IBOutlet weak var coverImageView: UIImageView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     
     
     @IBOutlet weak var overviewConstraint: NSLayoutConstraint!
     @IBOutlet weak var seasonsConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var genreConstraint: NSLayoutConstraint!
+    
     private weak var overviewViewController: OverviewViewController!
     private weak var seasonListViewController: SeasonListViewController!
+    private weak var genresViewController: GenresViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +74,8 @@ class ShowDetailsViewController: UIViewController, SeasonsListViewControllerDele
         
         // Colocar Constrain
         self.seasonsConstraint.constant = seasonListViewController.intrinsicContentSize().height + 20
-        //self.overviewConstraint.constant = overviewViewController.overviewTextView.intrinsicContentSize().height + 39
-        //println(overviewViewController.intrinsicContentSize().height)
+        self.overviewConstraint.constant = overviewViewController.intrinsicContentSize().height
+        self.genreConstraint.constant = genresViewController.intrinsicContentSize().height
         
     }
     
@@ -81,9 +86,9 @@ class ShowDetailsViewController: UIViewController, SeasonsListViewControllerDele
         
         if segue.identifier == "segueShowOverview" {
             
-            let showOverview = segue.destinationViewController as! OverviewViewController
+            overviewViewController = segue.destinationViewController as! OverviewViewController
             if let overview = self.show?.overview {
-                showOverview.overview = overview
+                overviewViewController.overview = overview
             }
             
         } else if segue.identifier == "segueShowSeasons" {
@@ -91,8 +96,8 @@ class ShowDetailsViewController: UIViewController, SeasonsListViewControllerDele
             seasonListViewController.loadSeasons(showSeasons)
         } else if segue.identifier == "segueShowGenres" {
             
-            let showGenres = segue.destinationViewController as! GenresViewController
-            showGenres.show = self.show
+            genresViewController = segue.destinationViewController as! GenresViewController
+            genresViewController.show = self.show
             
         } /*else if segue.identifier == "segueShowDetails" {
             let showDetails = segue.destinationViewController as! DetailsViewController
