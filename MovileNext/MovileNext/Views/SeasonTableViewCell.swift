@@ -9,6 +9,9 @@
 import UIKit
 import TraktModels
 import FloatRatingView
+import Haneke
+import Kingfisher
+
 
 class SeasonTableViewCell: UITableViewCell {
     
@@ -29,7 +32,11 @@ class SeasonTableViewCell: UITableViewCell {
         let placeholder = UIImage(named: "poster")
         
         if let url = season.poster?.thumbImageURL {
-            self.posterImageView.hnk_setImageFromURL(url, placeholder: placeholder)
+            //self.posterImageView.hnk_setImageFromURL(url, placeholder: placeholder)
+            
+            // Usando novo componente de imagem Kingfisher
+            self.posterImageView.kf_setImageWithURL(url, placeholderImage: placeholder)
+            
         } else {
             self.posterImageView.image = placeholder
         }
@@ -43,7 +50,7 @@ class SeasonTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        posterImageView.hnk_cancelSetImage()
+        //posterImageView.hnk_cancelSetImage()
         posterImageView.image = nil
     }
 

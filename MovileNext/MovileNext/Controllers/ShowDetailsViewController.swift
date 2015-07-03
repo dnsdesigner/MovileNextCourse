@@ -8,6 +8,8 @@
 
 import UIKit
 import TraktModels
+import Haneke
+import Kingfisher
 
 class ShowDetailsViewController: UIViewController, SeasonsListViewControllerDelegate {
     
@@ -39,7 +41,11 @@ class ShowDetailsViewController: UIViewController, SeasonsListViewControllerDele
         let placeholder = UIImage(named: "poster")
         
         if let url = self.show?.thumbImageURL {
-            self.coverImageView.hnk_setImageFromURL(url, placeholder: placeholder)
+            //self.coverImageView.hnk_setImageFromURL(url, placeholder: placeholder)
+            
+            // Usando novo componente de imagem Kingfisher
+            self.coverImageView.kf_setImageWithURL(url, placeholderImage: placeholder)
+            
         } else {
             self.coverImageView.image = placeholder
         }

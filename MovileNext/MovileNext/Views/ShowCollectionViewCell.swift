@@ -38,6 +38,7 @@ class ShowCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        
         //posterImageView.hnk_cancelSetImage()
         //let task = self.posterImageView.kf_setImageWithURL(NSURL(string: "http://your_image_url.png")!)
         //task.cancel()

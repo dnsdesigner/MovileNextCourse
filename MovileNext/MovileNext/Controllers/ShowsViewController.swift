@@ -93,13 +93,13 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         //println("Section Inset Left: \(flowLayout.sectionInset.left) | Section Inset Right: \(flowLayout.sectionInset.right)")
         
         let itemWidth = flowLayout.itemSize.width + flowLayout.minimumInteritemSpacing
-        println("Item size width: \(flowLayout.itemSize.width) | Minimum item Spacing: \(flowLayout.minimumInteritemSpacing)")
+        //println("Item size width: \(flowLayout.itemSize.width) | Minimum item Spacing: \(flowLayout.minimumInteritemSpacing)")
         
         // Espaço disponível na tela
         let widthAvailable = collectionView.bounds.width
         
         let maxPerRow = 3 as CGFloat //floor(collectionView.bounds.width / itemWidth)
-        println("Item size : \(itemWidth) | Collection size: \(collectionView.bounds.width) | Per row \(maxPerRow)")
+        //println("Item size : \(itemWidth) | Collection size: \(collectionView.bounds.width) | Per row \(maxPerRow)")
         
         // Calcula o número de espaço entre itens e espaço usado entre eles
         let spaces = maxPerRow + 1
@@ -108,19 +108,19 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Calcula o espaço necessário entre os itens
         let space = floor((collectionView.bounds.width - usedSpace) / spaces)
         
-        println("Space: \(space)")
+        //println("Space: \(space)")
         
         let increaseWidth = floor((((space - idealSpace) * spaces) / maxPerRow))
-        println("Increase Width: \(increaseWidth)")
+        //println("Increase Width: \(increaseWidth)")
         
         //flowLayout.itemSize = CGSizeMake(178, 160)
         //let novaLargura = ((space * spaces) - 18) / spaces
         
         let idealWidth = itemWidth + increaseWidth
-        println("Ideal Width: \(idealWidth)")
+        //println("Ideal Width: \(idealWidth)")
         
         let idealHeight = round(((flowLayout.itemSize.height / itemWidth) * idealWidth))
-        println("Ideal Height: \(idealHeight)")
+        //println("Ideal Height: \(idealHeight)")
         
         // Setar tamanho ideal
         flowLayout.itemSize = CGSizeMake(idealWidth, idealHeight)
