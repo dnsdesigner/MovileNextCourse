@@ -29,6 +29,7 @@
 		B419BA06FA2B7B30AE4619F6 /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4698AAF4789C894A19DA559C /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C828F09B4E8E5D4E9C8AF945 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = D18ABB9A84705F5741A17C32 /* LaunchScreen.xib */; };
 		CE2863A61B481D6E005C11FB /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2863A51B481D6E005C11FB /* CustomNavigationController.swift */; };
+		CE2863A81B4827F6005C11FB /* UINavigationBar+BottomHairline.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2863A71B4827F6005C11FB /* UINavigationBar+BottomHairline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		9ECCCF4414DC8CE54D8F98A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A219171412017527FB68E8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2863A51B481D6E005C11FB /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		CE2863A71B4827F6005C11FB /* UINavigationBar+BottomHairline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+BottomHairline.swift"; sourceTree = "<group>"; };
 		D18ABB9A84705F5741A17C32 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		EF974BFF00B9A69F27349F94 /* Pods-MovileNextV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovileNextV2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovileNextV2/Pods-MovileNextV2.release.xcconfig"; sourceTree = "<group>"; };
 		FC919F0D893727164AB12878 /* Pods_MovileNextV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileNextV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +240,7 @@
 		CC9F8C5AC63100459CBC6B86 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE2863A71B4827F6005C11FB /* UINavigationBar+BottomHairline.swift */,
 				95122A681B4733A200CAA20F /* UIColor+MovileNext.swift */,
 				95122A691B4733A200CAA20F /* UIImage+DarkenImage.swift */,
 			);
@@ -532,6 +535,7 @@
 				95122A751B47428D00CAA20F /* SeasonTableViewCell.swift in Sources */,
 				95122A611B47265B00CAA20F /* ShowsViewController.swift in Sources */,
 				95122A6F1B473AF100CAA20F /* ShowOverviewViewController.swift in Sources */,
+				CE2863A81B4827F6005C11FB /* UINavigationBar+BottomHairline.swift in Sources */,
 				95122A6D1B47384D00CAA20F /* FavoritesManager.swift in Sources */,
 				95122A6B1B4733A200CAA20F /* UIImage+DarkenImage.swift in Sources */,
 				2305DA54A6B4CD6065AF5FAF /* Storyboards.swift in Sources */,

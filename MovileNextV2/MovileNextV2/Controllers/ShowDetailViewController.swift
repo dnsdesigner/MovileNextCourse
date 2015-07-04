@@ -51,20 +51,20 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     
     func isFavorite() -> Bool {
         
-        println("Favoritos: \(self.favoritesManager.favoritesIdentifiers)")
+        //println("Favoritos: \(self.favoritesManager.favoritesIdentifiers)")
         
         if let traktId = self.show?.identifiers.trakt {
             
             if self.favoritesManager.favoritesIdentifiers.contains(traktId) {
                 
                 self.favoriteButton.selected = true
-                println("Existe em favoritos")
+                println("Show existe em favoritos")
                 return true
                 
             } else {
                 
                 self.favoriteButton.selected = false
-                println("Não existe em favoritos")
+                println("Show não existe em favoritos")
                 
                 return false
                 

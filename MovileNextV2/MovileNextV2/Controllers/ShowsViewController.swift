@@ -12,26 +12,58 @@ import TraktModels
 class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
     
+    private var favoritesManager:FavoritesManager = FavoritesManager()
     private let httpClient = TraktHTTPClient()
     private var shows: [Show]?
+    private var popularShows:[Show]?
+    private var favoriteShows = [Show]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Carregar os shows
         self.loadShows()
+        
+        // Remover linha divisória
+        self.navigationController?.navigationBar.hideBottomHairline()
     }
     
     func loadShows() {
         self.httpClient.getPopularShows { (result) -> Void in
             if let shows = result.value {
                 println("Shows carregados com sucesso!")
-                self.shows = shows
-                self.collectionView.reloadData()
+                
+                self.popularShows = shows
+                
+                for show in shows {
+                    
+                    if self.favoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
+                        self.favoriteShows.append(show)
+                    }
+                    
+                }
+                
+                self.reloadShows()
+                
             } else {
                 println("Oops \(result.error)")
             }
+        }
+    }
+    
+    func reloadShows() {
+        switch self.filterSegmentedControl.selectedSegmentIndex {
+            case 0:
+                self.shows = self.popularShows
+                self.collectionView.reloadData()
+            case 1:
+                self.shows = self.favoriteShows
+                self.collectionView.reloadData()
+            default:
+                self.collectionView.reloadData()
+            
         }
     }
     
@@ -115,5 +147,15 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             
         }
     }
+    
+    // MARK: - Segmented Control
+    
+    @IBAction func SegmentedTouch(sender: AnyObject) {
+     
+        println("Segmented index: \(self.filterSegmentedControl.selectedSegmentIndex)")
+        self.reloadShows()
+        
+    }
+    
 
 }

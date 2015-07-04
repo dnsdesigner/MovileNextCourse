@@ -16,8 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXw-zD-GEN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="barTintColor" red="0.95686274510000002" green="0.50196078430000002" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="LF1-2Z-U2f">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="x3m-lg-Sfg">
+                                            <rect key="frame" x="160" y="7.5" width="280" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Popular"/>
+                                                <segment title="Favorites"/>
+                                            </segments>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="SegmentedTouch:" destination="aXE-0H-06c" eventType="valueChanged" id="qlb-df-XRU"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qii-EH-sdr">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ev8-ZH-Qfm">
                                     <size key="itemSize" width="90" height="156"/>
@@ -72,15 +93,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="U4l-1o-Tmu" firstAttribute="top" secondItem="qii-EH-sdr" secondAttribute="bottom" id="Mc6-85-CQ2"/>
-                            <constraint firstItem="qii-EH-sdr" firstAttribute="leading" secondItem="uwv-hv-ud5" secondAttribute="leading" id="VQA-AK-iha"/>
-                            <constraint firstItem="qii-EH-sdr" firstAttribute="top" secondItem="uwv-hv-ud5" secondAttribute="top" id="bFt-qV-ACL"/>
-                            <constraint firstAttribute="trailing" secondItem="qii-EH-sdr" secondAttribute="trailing" id="x2L-RR-cx1"/>
+                            <constraint firstAttribute="trailing" secondItem="HXw-zD-GEN" secondAttribute="trailing" id="083-1f-3hH"/>
+                            <constraint firstItem="U4l-1o-Tmu" firstAttribute="top" secondItem="qii-EH-sdr" secondAttribute="bottom" id="GkM-o6-9tL"/>
+                            <constraint firstAttribute="trailing" secondItem="qii-EH-sdr" secondAttribute="trailing" id="IKh-f8-tjH"/>
+                            <constraint firstItem="qii-EH-sdr" firstAttribute="top" secondItem="HXw-zD-GEN" secondAttribute="bottom" id="SOu-DN-FdS"/>
+                            <constraint firstItem="qii-EH-sdr" firstAttribute="top" secondItem="HXw-zD-GEN" secondAttribute="bottom" id="bF7-Kx-xUU"/>
+                            <constraint firstItem="qii-EH-sdr" firstAttribute="leading" secondItem="uwv-hv-ud5" secondAttribute="leading" id="fcp-tn-xzP"/>
+                            <constraint firstItem="HXw-zD-GEN" firstAttribute="top" secondItem="By1-dU-rAH" secondAttribute="bottom" id="jCE-g2-srY"/>
+                            <constraint firstItem="HXw-zD-GEN" firstAttribute="leading" secondItem="uwv-hv-ud5" secondAttribute="leading" id="zLe-O6-c3N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shows" id="c3s-4D-zhC"/>
                     <connections>
                         <outlet property="collectionView" destination="qii-EH-sdr" id="eDM-oI-rVj"/>
+                        <outlet property="filterSegmentedControl" destination="x3m-lg-Sfg" id="dlO-5o-Urs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIC-Xt-xAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
