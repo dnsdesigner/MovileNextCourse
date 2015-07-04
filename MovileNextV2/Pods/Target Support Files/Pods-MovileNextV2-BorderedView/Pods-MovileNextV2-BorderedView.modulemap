@@ -1,0 +1,6 @@
+framework module BorderedView {
+  umbrella header "Pods-MovileNextV2-BorderedView-umbrella.h"
+
+  export *
+  module * { export * }
+}

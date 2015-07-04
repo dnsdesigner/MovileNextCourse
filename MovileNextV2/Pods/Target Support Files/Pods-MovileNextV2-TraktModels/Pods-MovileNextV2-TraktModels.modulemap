@@ -1,0 +1,6 @@
+framework module TraktModels {
+  umbrella header "Pods-MovileNextV2-TraktModels-umbrella.h"
+
+  export *
+  module * { export * }
+}

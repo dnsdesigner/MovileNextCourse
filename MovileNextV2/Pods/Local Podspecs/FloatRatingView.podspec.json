@@ -1,0 +1,17 @@
+{
+  "name": "FloatRatingView",
+  "version": "0.1.0",
+  "summary": "Whole, half or floating point ratings control written in Swift.",
+  "homepage": "https://github.com/strekfus/FloatRatingView",
+  "license": "MIT",
+  "authors": {
+    "Glen Yi": "glenyi81@gmail.com"
+  },
+  "social_media_url": "https://twitter.com/glenyi",
+  "source": {
+    "git": "https://github.com/strekfus/FloatRatingView.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "FloatRatingView.swift",
+  "requires_arc": true
+}

@@ -1,0 +1,26 @@
+{
+  "name": "OverlayView",
+  "version": "0.1.0",
+  "summary": "Just an OverlayView.",
+  "homepage": "https://github.com/marcelofabri/OverlayView",
+  "license": "MIT",
+  "authors": {
+    "Marcelo Fabri": "me@marcelofabri.com"
+  },
+  "source": {
+    "git": "https://github.com/marcelofabri/OverlayView.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/marcelofabri_",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "OverlayView": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "frameworks": "UIKit"
+}

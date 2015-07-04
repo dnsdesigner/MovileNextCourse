@@ -1,0 +1,6 @@
+framework module Argo {
+  umbrella header "Pods-MovileNextV2-Argo-umbrella.h"
+
+  export *
+  module * { export * }
+}
