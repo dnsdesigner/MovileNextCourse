@@ -55,16 +55,17 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         
         if let traktId = self.show?.identifiers.trakt {
             
-            if self.favoritesManager.favoritesIdentifiers.contains(traktId) {
+            if FavoritesManager.favoritesIdentifiers.contains(traktId) {
                 
                 self.favoriteButton.selected = true
-                println("Show existe em favoritos")
+                //println("Show existe em favoritos")
+                
                 return true
                 
             } else {
                 
                 self.favoriteButton.selected = false
-                println("Show não existe em favoritos")
+                //println("Show não existe em favoritos")
                 
                 return false
                 

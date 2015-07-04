@@ -28,7 +28,44 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         // Remover linha divisória
         self.navigationController?.navigationBar.hideBottomHairline()
+        
+        // Registrar notificação de favoritos
+        let name = FavoritesManager.favoritesChangedNotification
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        
+        notificationCenter.addObserver(self, selector: "favoritesChanged", name: name, object: nil)
     }
+    
+    deinit {
+        
+        // Retirar o registro de notificação de favoritos
+        let name = FavoritesManager.favoritesChangedNotification
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        
+        notificationCenter.removeObserver(self, name: name, object: nil)
+        
+    }
+    
+    func favoritesChanged() {
+        
+        println("Favorites changed executed!")
+        
+        self.favoriteShows.removeAll(keepCapacity: true)
+        
+        if let shows = self.shows {
+            
+            for show in shows {
+            
+                if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
+                    self.favoriteShows.append(show)
+                }
+            }
+        }
+        
+        println(FavoritesManager.favoritesIdentifiers)
+        self.reloadShows()
+    }
+    
     
     func loadShows() {
         self.httpClient.getPopularShows { (result) -> Void in
@@ -39,7 +76,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
                 
                 for show in shows {
                     
-                    if self.favoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
+                    if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
                         self.favoriteShows.append(show)
                     }
                     
@@ -54,6 +91,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func reloadShows() {
+        
         switch self.filterSegmentedControl.selectedSegmentIndex {
             case 0:
                 self.shows = self.popularShows
@@ -63,7 +101,6 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
                 self.collectionView.reloadData()
             default:
                 self.collectionView.reloadData()
-            
         }
     }
     
@@ -152,7 +189,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     @IBAction func SegmentedTouch(sender: AnyObject) {
      
-        println("Segmented index: \(self.filterSegmentedControl.selectedSegmentIndex)")
+        //println("Segmented index: \(self.filterSegmentedControl.selectedSegmentIndex)")
         self.reloadShows()
         
     }

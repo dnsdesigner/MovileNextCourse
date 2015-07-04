@@ -12,7 +12,9 @@ class FavoritesManager: NSObject {
     
     private var defaults = NSUserDefaults.standardUserDefaults()
     
-    var favoritesIdentifiers: Set<Int> = {
+    static let favoritesChangedNotification = "favoritesChangedNotification"
+    
+    static var favoritesIdentifiers: Set<Int> = {
         
         // Se existir retorna o objeto set com favoritos, senão retorna um objeto vazio
         if let favoritesId = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? [Int] {
@@ -20,7 +22,6 @@ class FavoritesManager: NSObject {
             var favoritesSet:Set<Int> = Set(favoritesId)
             
             return favoritesSet
-
             
         } else {
             
@@ -30,31 +31,42 @@ class FavoritesManager: NSObject {
         
     }()
     
+    private func postNotification() {
+        
+        // Postar aviso de modificação no sistema
+        let name = self.dynamicType.favoritesChangedNotification
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.postNotificationName(name, object: self)
+        
+    }
+    
     func setFavorite(id: Int) {
         
-        self.favoritesIdentifiers.insert(id)
+        FavoritesManager.favoritesIdentifiers.insert(id)
         
-        var array = Array(favoritesIdentifiers)
+        var array = Array(FavoritesManager.favoritesIdentifiers)
         
         self.defaults.setObject(array, forKey: "favorites")
         self.defaults.synchronize()
         
         println("Id \(id) adicionado a defaults")
         
+        self.postNotification()
+        
     }
     
     func removeFavorite(id: Int) {
         
-        self.favoritesIdentifiers.remove(id)
+        FavoritesManager.favoritesIdentifiers.remove(id)
         
-        var array = Array(favoritesIdentifiers)
+        var array = Array(FavoritesManager.favoritesIdentifiers)
         
         self.defaults.setObject(array, forKey: "favorites")
         self.defaults.synchronize()
         
         println("Id \(id) removido de defaults")
         
-        
+        self.postNotification()
     }
     
 }
