@@ -8,19 +8,19 @@
 
 import UIKit
 
-class UserDefaultsManager: NSObject {
+class FavoritesManager: NSObject {
     
     private var defaults = NSUserDefaults.standardUserDefaults()
     
     var favoritesIdentifiers: Set<Int> = {
         
         // Se existir retorna o objeto set com favoritos, senão retorna um objeto vazio
-        if let favoritesId: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("favorites") {
+        if let favoritesId = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? [Int] {
             
-            var favoritesArray = favoritesId as! Array<Int>
-            var favoritesSet:Set<Int> = Set(favoritesArray)
+            var favoritesSet:Set<Int> = Set(favoritesId)
             
             return favoritesSet
+
             
         } else {
             
@@ -40,6 +40,20 @@ class UserDefaultsManager: NSObject {
         self.defaults.synchronize()
         
         println("Id \(id) adicionado a defaults")
+        
+    }
+    
+    func removeFavorite(id: Int) {
+        
+        self.favoritesIdentifiers.remove(id)
+        
+        var array = Array(favoritesIdentifiers)
+        
+        self.defaults.setObject(array, forKey: "favorites")
+        self.defaults.synchronize()
+        
+        println("Id \(id) removido de defaults")
+        
         
     }
     

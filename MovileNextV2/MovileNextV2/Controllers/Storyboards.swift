@@ -16,8 +16,8 @@ struct Storyboards {
             return UIStoryboard(name: self.identifier, bundle: nil)
         }
 
-        static func instantiateInitialViewController() -> UINavigationController! {
-            return self.storyboard.instantiateInitialViewController() as! UINavigationController
+        static func instantiateInitialViewController() -> CustomNavigationController! {
+            return self.storyboard.instantiateInitialViewController() as! CustomNavigationController
         }
 
         static func instantiateViewControllerWithIdentifier(identifier: String) -> UIViewController {
@@ -269,6 +269,8 @@ extension ShowDetailViewController {
     }
 
 }
+
+//MARK: - CustomNavigationController
 
 //MARK: - ShowOverviewViewController
 

@@ -16,10 +16,15 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     private let httpClient = TraktHTTPClient()
     var show:Show?
     var showSeasons:[Season]?
+    
+    private var favoritesManager:FavoritesManager = FavoritesManager()
    
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var ratingView: FloatRatingView!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    
     
     // ViewControllers
     private weak var showOverviewViewController: ShowOverviewViewController!
@@ -39,6 +44,35 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         // Carregar dados
         self.loadData()
         
+        // Verificar favoritos
+        self.isFavorite()
+        
+    }
+    
+    func isFavorite() -> Bool {
+        
+        println("Favoritos: \(self.favoritesManager.favoritesIdentifiers)")
+        
+        if let traktId = self.show?.identifiers.trakt {
+            
+            if self.favoritesManager.favoritesIdentifiers.contains(traktId) {
+                
+                self.favoriteButton.selected = true
+                println("Existe em favoritos")
+                return true
+                
+            } else {
+                
+                self.favoriteButton.selected = false
+                println("Não existe em favoritos")
+                
+                return false
+                
+            }
+            
+        }
+        
+        return false
     }
     
     func loadData() {
@@ -127,5 +161,23 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     func seasonsController(vc: ShowSeasonViewController, didSelectSeason season: Season) {
         println("Season: \(season.number)")
     }
-
+    
+    // MARK: - Button Actions
+    
+    @IBAction func favoriteTouch(sender: AnyObject) {
+        
+        if let traktId = self.show?.identifiers.trakt {
+            
+            if self.isFavorite() {
+                self.favoritesManager.removeFavorite(traktId)
+            } else {
+                self.favoritesManager.setFavorite(traktId)
+            }
+            
+        }
+        
+        self.isFavorite()
+        
+    }
+    
 }

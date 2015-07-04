@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GTK-t9-50X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GTK-t9-50X">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -165,6 +165,10 @@
                                                         <state key="normal" image="like-heart">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <state key="selected" image="like-heart-on"/>
+                                                        <connections>
+                                                            <action selector="favoriteTouch:" destination="aF9-ah-G9M" eventType="touchUpInside" id="Bka-MR-OXW"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -262,6 +266,7 @@
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
                         <outlet property="coverImageView" destination="3su-Uo-dfQ" id="aIk-UC-S4Y"/>
+                        <outlet property="favoriteButton" destination="nHB-Gn-2Qc" id="PLg-cc-lAr"/>
                         <outlet property="genresConstraint" destination="Jbs-vS-Zzu" id="a53-FC-AUr"/>
                         <outlet property="moreConstraint" destination="PQS-cY-43F" id="GL8-tJ-k2w"/>
                         <outlet property="overviewConstraint" destination="YaS-pN-bg8" id="tmP-Md-X2A"/>
@@ -274,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="2063" y="567"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="imT-E1-Iho">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GTK-t9-50X" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GTK-t9-50X" customClass="CustomNavigationController" customModule="MovileNextV2" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EMO-hq-JSg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -310,7 +315,7 @@
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sk-yP-chj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sk-yP-chj">
                                 <rect key="frame" x="16" y="31" width="568" height="89"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -321,13 +326,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8x1-mp-HW1" firstAttribute="leading" secondItem="pqt-53-abW" secondAttribute="leading" constant="16" id="2BT-YM-1hg"/>
-                            <constraint firstItem="2sk-yP-chj" firstAttribute="top" secondItem="8x1-mp-HW1" secondAttribute="bottom" constant="8" id="2CW-OP-Lbo"/>
                             <constraint firstAttribute="trailing" secondItem="8x1-mp-HW1" secondAttribute="trailing" constant="16" id="4By-Gv-ugb"/>
                             <constraint firstItem="8x1-mp-HW1" firstAttribute="top" secondItem="8Lo-Zj-KPY" secondAttribute="bottom" constant="8" id="57n-v0-788"/>
-                            <constraint firstItem="2sk-yP-chj" firstAttribute="leading" secondItem="pqt-53-abW" secondAttribute="leading" constant="16" id="NXz-I0-Y6d"/>
-                            <constraint firstAttribute="trailing" secondItem="2sk-yP-chj" secondAttribute="trailing" constant="16" id="O8D-lq-0iL"/>
-                            <constraint firstItem="2sk-yP-chj" firstAttribute="top" secondItem="8x1-mp-HW1" secondAttribute="bottom" constant="8" id="VAz-03-QJ5"/>
-                            <constraint firstItem="hk4-Vy-59V" firstAttribute="top" secondItem="2sk-yP-chj" secondAttribute="bottom" constant="8" id="zn1-3l-Fjf"/>
+                            <constraint firstItem="2sk-yP-chj" firstAttribute="leading" secondItem="pqt-53-abW" secondAttribute="leading" constant="16" id="Qyu-5z-czo"/>
+                            <constraint firstItem="hk4-Vy-59V" firstAttribute="top" secondItem="2sk-yP-chj" secondAttribute="bottom" constant="8" id="XVb-i3-M8X"/>
+                            <constraint firstAttribute="trailing" secondItem="2sk-yP-chj" secondAttribute="trailing" constant="16" id="bNZ-Cf-EXr"/>
+                            <constraint firstItem="2sk-yP-chj" firstAttribute="top" secondItem="8x1-mp-HW1" secondAttribute="bottom" constant="8" id="x7t-e0-RWi"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -601,6 +605,7 @@
     <resources>
         <image name="bg" width="320" height="200"/>
         <image name="like-heart" width="34" height="30"/>
+        <image name="like-heart-on" width="34" height="30"/>
         <image name="poster" width="96" height="139"/>
         <image name="star-gray" width="10" height="10"/>
         <image name="star-yellow" width="10" height="10"/>

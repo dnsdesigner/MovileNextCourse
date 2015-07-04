@@ -19,7 +19,7 @@
 		95122A671B472DB600CAA20F /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A661B472DB600CAA20F /* ShowDetailViewController.swift */; };
 		95122A6A1B4733A200CAA20F /* UIColor+MovileNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A681B4733A200CAA20F /* UIColor+MovileNext.swift */; };
 		95122A6B1B4733A200CAA20F /* UIImage+DarkenImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A691B4733A200CAA20F /* UIImage+DarkenImage.swift */; };
-		95122A6D1B47384D00CAA20F /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A6C1B47384D00CAA20F /* UserDefaultsManager.swift */; };
+		95122A6D1B47384D00CAA20F /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A6C1B47384D00CAA20F /* FavoritesManager.swift */; };
 		95122A6F1B473AF100CAA20F /* ShowOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A6E1B473AF100CAA20F /* ShowOverviewViewController.swift */; };
 		95122A711B473B4D00CAA20F /* ShowInternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A701B473B4D00CAA20F /* ShowInternalViewController.swift */; };
 		95122A731B47416100CAA20F /* ShowSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A721B47416100CAA20F /* ShowSeasonViewController.swift */; };
@@ -28,6 +28,7 @@
 		95122A791B4748C700CAA20F /* ShowMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95122A781B4748C700CAA20F /* ShowMoreViewController.swift */; };
 		B419BA06FA2B7B30AE4619F6 /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4698AAF4789C894A19DA559C /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C828F09B4E8E5D4E9C8AF945 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = D18ABB9A84705F5741A17C32 /* LaunchScreen.xib */; };
+		CE2863A61B481D6E005C11FB /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2863A51B481D6E005C11FB /* CustomNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,7 @@
 		95122A661B472DB600CAA20F /* ShowDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
 		95122A681B4733A200CAA20F /* UIColor+MovileNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MovileNext.swift"; sourceTree = "<group>"; };
 		95122A691B4733A200CAA20F /* UIImage+DarkenImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DarkenImage.swift"; sourceTree = "<group>"; };
-		95122A6C1B47384D00CAA20F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		95122A6C1B47384D00CAA20F /* FavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		95122A6E1B473AF100CAA20F /* ShowOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOverviewViewController.swift; sourceTree = "<group>"; };
 		95122A701B473B4D00CAA20F /* ShowInternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowInternalViewController.swift; sourceTree = "<group>"; };
 		95122A721B47416100CAA20F /* ShowSeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSeasonViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		95122A781B4748C700CAA20F /* ShowMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMoreViewController.swift; sourceTree = "<group>"; };
 		9ECCCF4414DC8CE54D8F98A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A219171412017527FB68E8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE2863A51B481D6E005C11FB /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		D18ABB9A84705F5741A17C32 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		EF974BFF00B9A69F27349F94 /* Pods-MovileNextV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovileNextV2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovileNextV2/Pods-MovileNextV2.release.xcconfig"; sourceTree = "<group>"; };
 		FC919F0D893727164AB12878 /* Pods_MovileNextV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovileNextV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				95122A601B47265B00CAA20F /* ShowsViewController.swift */,
 				6888CC88C6F80B53186BA786 /* Storyboards.swift */,
 				95122A641B472B0F00CAA20F /* TraktHTTPClient.swift */,
+				CE2863A51B481D6E005C11FB /* CustomNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,7 +230,7 @@
 		C60E016F5A9C39CB1C40723D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				95122A6C1B47384D00CAA20F /* UserDefaultsManager.swift */,
+				95122A6C1B47384D00CAA20F /* FavoritesManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -529,12 +532,13 @@
 				95122A751B47428D00CAA20F /* SeasonTableViewCell.swift in Sources */,
 				95122A611B47265B00CAA20F /* ShowsViewController.swift in Sources */,
 				95122A6F1B473AF100CAA20F /* ShowOverviewViewController.swift in Sources */,
-				95122A6D1B47384D00CAA20F /* UserDefaultsManager.swift in Sources */,
+				95122A6D1B47384D00CAA20F /* FavoritesManager.swift in Sources */,
 				95122A6B1B4733A200CAA20F /* UIImage+DarkenImage.swift in Sources */,
 				2305DA54A6B4CD6065AF5FAF /* Storyboards.swift in Sources */,
 				95122A671B472DB600CAA20F /* ShowDetailViewController.swift in Sources */,
 				95122A651B472B0F00CAA20F /* TraktHTTPClient.swift in Sources */,
 				95122A731B47416100CAA20F /* ShowSeasonViewController.swift in Sources */,
+				CE2863A61B481D6E005C11FB /* CustomNavigationController.swift in Sources */,
 				95122A791B4748C700CAA20F /* ShowMoreViewController.swift in Sources */,
 				7860C72E5A5C41510767723E /* Main.storyboard in Sources */,
 				95122A771B47483300CAA20F /* ShowGenresViewController.swift in Sources */,
