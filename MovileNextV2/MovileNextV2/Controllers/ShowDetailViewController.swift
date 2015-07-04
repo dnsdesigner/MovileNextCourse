@@ -15,6 +15,7 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     
     private let httpClient = TraktHTTPClient()
     var show:Show?
+    var season: Season?
     var showSeasons:[Season]?
     
     private var favoritesManager:FavoritesManager = FavoritesManager()
@@ -23,7 +24,7 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     @IBOutlet weak var ratingView: FloatRatingView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
-    
+    @IBOutlet weak var yearLabel: UILabel!
     
     
     // ViewControllers
@@ -31,6 +32,7 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     private weak var showSeasonsViewController: ShowSeasonViewController!
     private weak var showGenresViewController: ShowGenresViewController!
     private weak var showMoreViewController: ShowMoreViewController!
+    private weak var seasonEpisodesViewController: SeasonEpisodesViewController!
     
     // Constraints
     @IBOutlet weak var overviewConstraint: NSLayoutConstraint!
@@ -40,6 +42,23 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Atualizar título da tela
+        if let title = self.show?.title {
+            self.title = title
+        }
+        
+        if let showYear = self.show?.firstAired {
+            
+            // Cria uma formatação de data para obter apenas o ano
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "yyyy"
+            formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+            
+            let year = formatter.stringFromDate(showYear) as String
+            
+            self.yearLabel.text  = year
+        }
         
         // Carregar dados
         self.loadData()
@@ -154,6 +173,13 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
             
             self.showMoreViewController = segue.destinationViewController as! ShowMoreViewController
             self.showMoreViewController.show = self.show
+            
+        // Season Episodes
+        } else if segue.identifier == Segue.SegueSeasonEpisodes.identifier! {
+            
+            self.seasonEpisodesViewController = segue.destinationViewController as! SeasonEpisodesViewController
+            self.seasonEpisodesViewController.season = self.season
+            self.seasonEpisodesViewController.show = self.show
         }
         
     }
@@ -161,6 +187,9 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     // MARK: - ShowSeasons Delegate
     func seasonsController(vc: ShowSeasonViewController, didSelectSeason season: Season) {
         println("Season: \(season.number)")
+        
+        self.season = season
+        performSegueWithIdentifier(Segue.SegueSeasonEpisodes.identifier!, sender: self)
     }
     
     // MARK: - Button Actions

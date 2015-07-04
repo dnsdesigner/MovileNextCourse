@@ -214,6 +214,36 @@ extension ShowsViewController {
 }
 
 
+//MARK: - SeasonEpisodesViewController
+extension SeasonEpisodesViewController { 
+
+    enum Reusable: String, Printable, ReusableProtocol {
+        case EpisodeCell = "EpisodeCell"
+
+        var kind: ReusableKind? {
+            switch (self) {
+            case EpisodeCell:
+                return ReusableKind(rawValue: "tableViewCell")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var viewType: UIView.Type? {
+            switch (self) {
+            default:
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
+
+
 //MARK: - ShowDetailViewController
 extension UIStoryboardSegue {
     func selection() -> ShowDetailViewController.Segue? {
@@ -231,6 +261,7 @@ extension ShowDetailViewController {
         case SegueShowSeasons = "SegueShowSeasons"
         case SegueShowGenres = "SegueShowGenres"
         case SegueShowMore = "SegueShowMore"
+        case SegueSeasonEpisodes = "SegueSeasonEpisodes"
 
         var kind: SegueKind? {
             switch (self) {
@@ -242,6 +273,8 @@ extension ShowDetailViewController {
                 return SegueKind(rawValue: "embed")
             case SegueShowMore:
                 return SegueKind(rawValue: "embed")
+            case SegueSeasonEpisodes:
+                return SegueKind(rawValue: "show")
             default:
                 preconditionFailure("Invalid value")
                 break
@@ -258,6 +291,8 @@ extension ShowDetailViewController {
                 return ShowGenresViewController.self
             case SegueShowMore:
                 return ShowMoreViewController.self
+            case SegueSeasonEpisodes:
+                return SeasonEpisodesViewController.self
             default:
                 assertionFailure("Unknown destination")
                 return nil

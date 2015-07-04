@@ -26,14 +26,23 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Carregar os shows
         self.loadShows()
         
-        // Remover linha divisória
-        self.navigationController?.navigationBar.hideBottomHairline()
+        
         
         // Registrar notificação de favoritos
         let name = FavoritesManager.favoritesChangedNotification
         let notificationCenter = NSNotificationCenter.defaultCenter()
         
         notificationCenter.addObserver(self, selector: "favoritesChanged", name: name, object: nil)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // Remover linha divisória
+        self.navigationController?.navigationBar.hideBottomHairline()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        // Volta linha divisória
+        self.navigationController?.navigationBar.showBottomHairline()
     }
     
     deinit {
