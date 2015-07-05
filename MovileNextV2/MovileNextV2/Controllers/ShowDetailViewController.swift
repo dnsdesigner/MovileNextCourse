@@ -78,9 +78,9 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         
         //println("Favoritos: \(self.favoritesManager.favoritesIdentifiers)")
         
-        if let traktId = self.show?.identifiers.trakt {
+        if let showId = self.show?.identifiers.slug {
             
-            if FavoritesManager.favoritesIdentifiers.contains(traktId) {
+            if FavoritesManager.favoritesIdentifiers.contains(showId) {
                 
                 self.favoriteButton.selected = true
                 //println("Show existe em favoritos")
@@ -218,12 +218,12 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         
         
-        if let traktId = self.show?.identifiers.trakt {
+        if let showId = self.show?.identifiers.slug {
             
             if self.isFavorite() {
-                self.favoritesManager.removeFavorite(traktId)
+                self.favoritesManager.removeFavorite(showId)
             } else {
-                self.favoritesManager.setFavorite(traktId)
+                self.favoritesManager.setFavorite(showId)
             }
             
         }

@@ -14,18 +14,18 @@ class FavoritesManager: NSObject {
     
     static let favoritesChangedNotification = "favoritesChangedNotification"
     
-    static var favoritesIdentifiers: Set<Int> = {
+    static var favoritesIdentifiers: Set<String> = {
         
         // Se existir retorna o objeto set com favoritos, senão retorna um objeto vazio
-        if let favoritesId = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? [Int] {
+        if let favoritesId = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? [String] {
             
-            var favoritesSet:Set<Int> = Set(favoritesId)
+            var favoritesSet:Set<String> = Set(favoritesId)
             
             return favoritesSet
             
         } else {
             
-            return Set<Int>()
+            return Set<String>()
             
         }
         
@@ -40,31 +40,31 @@ class FavoritesManager: NSObject {
         
     }
     
-    func setFavorite(id: Int) {
+    func setFavorite(showId: String) {
         
-        FavoritesManager.favoritesIdentifiers.insert(id)
+        FavoritesManager.favoritesIdentifiers.insert(showId)
         
         var array = Array(FavoritesManager.favoritesIdentifiers)
         
         self.defaults.setObject(array, forKey: "favorites")
         self.defaults.synchronize()
         
-        println("Id \(id) adicionado a defaults")
+        println("Id \(showId) adicionado a defaults")
         
         self.postNotification()
         
     }
     
-    func removeFavorite(id: Int) {
+    func removeFavorite(showId: String) {
         
-        FavoritesManager.favoritesIdentifiers.remove(id)
+        FavoritesManager.favoritesIdentifiers.remove(showId)
         
         var array = Array(FavoritesManager.favoritesIdentifiers)
         
         self.defaults.setObject(array, forKey: "favorites")
         self.defaults.synchronize()
         
-        println("Id \(id) removido de defaults")
+        println("Id \(showId) removido de defaults")
         
         self.postNotification()
     }

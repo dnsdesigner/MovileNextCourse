@@ -38,11 +38,15 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let notificationCenter = NSNotificationCenter.defaultCenter()
         
         notificationCenter.addObserver(self, selector: "favoritesChanged", name: name, object: nil)
+        
+        println(FavoritesManager.favoritesIdentifiers)
     }
     
     override func viewWillAppear(animated: Bool) {
         // Remover linha divisória
         self.navigationController?.navigationBar.hideBottomHairline()
+        
+        self.reloadShows()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -68,17 +72,28 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         self.favoriteShows.removeAll(keepCapacity: true)
         
-        if let shows = self.shows {
+        /*if let shows = self.shows {
             
             for show in shows {
             
-                if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
+                if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.slug!) {
                     self.favoriteShows.append(show)
                 }
             }
+        }*/
+        
+        for showId in FavoritesManager.favoritesIdentifiers {
+            println("slug: \(showId)")
+            
+            self.httpClient.getShow(showId, completion: { (result) -> Void in
+                
+                if let show = result.value {
+                    self.favoriteShows.append(show)
+                    println("Show \(show.identifiers.slug!) carregado com sucesso!")
+                }
+            })
         }
         
-        println(FavoritesManager.favoritesIdentifiers)
         self.reloadShows()
     }
     
@@ -117,18 +132,32 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             // Aviso que existe uma requisição em andamento
             self.isLoading = true
         
-            self.httpClient.getPopularShows(1, limit: 12) { (result) -> Void in
+            self.httpClient.getPopularShows(1, limit: limit) { (result) -> Void in
                 if let shows = result.value {
                     println("Shows carregados com sucesso!")
                     
                     self.popularShows = shows
                     
-                    for show in shows {
+                    
+                    // Carrega os favoritos
+                    /*for show in shows {
                         
                         if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
                             self.favoriteShows.append(show)
                         }
                         
+                    }*/
+                    
+                    for showId in FavoritesManager.favoritesIdentifiers {
+                        println("slug: \(showId)")
+                        
+                        self.httpClient.getShow(showId, completion: { (result) -> Void in
+                            
+                            if let show = result.value {
+                                self.favoriteShows.append(show)
+                                println("Show \(show.identifiers.slug) carregado com sucesso!")
+                            }
+                        })
                     }
                     
                     self.reloadShows()
@@ -165,9 +194,10 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
                     for show in shows {
                         self.popularShows.append(show)
                         
-                        if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
+                        // Verifica favoritos
+                        /*if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
                             self.favoriteShows.append(show)
-                        }
+                        }*/
                     }
                     
                     self.reloadShows()
@@ -219,7 +249,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             cell.loadShow(show)
         }
         
-        if indexPath.row == self.popularShows.count - 2 {
+        if indexPath.row == self.popularShows.count - 3 {
             self.loadMore()
         }
         
