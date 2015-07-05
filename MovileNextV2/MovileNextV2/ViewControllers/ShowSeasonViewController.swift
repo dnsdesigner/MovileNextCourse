@@ -28,6 +28,12 @@ class ShowSeasonViewController: UIViewController, UITableViewDelegate, UITableVi
         loadSeasons(self.showSeasons)
     }
     
+    deinit {
+        
+        println("\(self.dynamicType) deinit")
+        
+    }
+    
     func loadSeasons(seasons: [Season]?) {
         self.showSeasons = seasons
         if isViewLoaded() {

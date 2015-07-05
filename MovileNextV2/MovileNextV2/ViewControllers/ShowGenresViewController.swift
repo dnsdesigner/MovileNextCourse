@@ -33,6 +33,12 @@ class ShowGenresViewController: UIViewController, ShowInternalViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        
+        println("\(self.dynamicType) deinit")
+        
+    }
+    
     // MARK: - ShowInternalProtocol
     func intrinsicContentSize() -> CGSize {
         

@@ -68,6 +68,12 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         
     }
     
+    deinit {
+        
+        println("\(self.dynamicType) deinit")
+        
+    }
+    
     func isFavorite() -> Bool {
         
         //println("Favoritos: \(self.favoritesManager.favoritesIdentifiers)")
@@ -196,6 +202,22 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     
     @IBAction func favoriteTouch(sender: AnyObject) {
         
+        let button = sender as! UIButton
+        
+        
+        // Cria uma animação
+        let pulseAnimation = CABasicAnimation(keyPath: "transform.scale")
+        
+        pulseAnimation.duration = 0.4
+        pulseAnimation.fromValue = 1
+        pulseAnimation.toValue = button.selected ? 1.2 : 0.8
+        
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = 1
+        
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        
+        
         if let traktId = self.show?.identifiers.trakt {
             
             if self.isFavorite() {
@@ -206,7 +228,15 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
             
         }
         
-        self.isFavorite()
+        // Animação para exibir botão de favoritos
+        UIView.transitionWithView(button, duration: 0.4, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            
+            // Adiciona a animação criada no botão
+            button.layer.addAnimation(pulseAnimation, forKey: nil)
+            self.isFavorite()
+            
+        }, completion: nil)
+        
         
     }
     

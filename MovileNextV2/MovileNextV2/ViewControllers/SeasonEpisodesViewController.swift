@@ -18,8 +18,11 @@ class SeasonEpisodesViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var ratingView: FloatRatingView!
     @IBOutlet weak var ratingLabel: UILabel!
     
+    private let httpClient = TraktHTTPClient()
+    
     var season:Season?
     var show: Show?
+    var episodes = Array<Episode>()
     
 
     override func viewDidLoad() {
@@ -27,6 +30,36 @@ class SeasonEpisodesViewController: UIViewController, UITableViewDelegate, UITab
         
         // Carregar dados
         self.loadData()
+        
+        self.loadEpisodes()
+        
+    }
+    
+    func loadEpisodes() {
+        
+        if let showId = self.show?.identifiers.slug,
+        let seasonNumber = self.season?.number {
+            
+            self.httpClient.getEpisodes(showId, season: seasonNumber, completion: { (result) -> Void in
+                if let episodes = result.value {
+                    
+                    self.episodes = episodes
+                    println("Episodes carregados")
+                    
+                    self.tableView.reloadData()
+                    
+                } else {
+                    println("Oops \(result.error)")
+                }
+            })
+                
+        }
+        
+    }
+    
+    deinit {
+        
+        println("\(self.dynamicType) deinit")
         
     }
     
@@ -65,12 +98,17 @@ class SeasonEpisodesViewController: UIViewController, UITableViewDelegate, UITab
     
     // MARK: - Table View
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.episodes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = Reusable.EpisodeCell.identifier!
         let cell = self.tableView.dequeueReusableCellWithIdentifier(identifier) as! UITableViewCell
+        
+        let episode = self.episodes[indexPath.row] as Episode
+        
+        cell.textLabel?.text = "S\(episode.seasonNumber)E\(episode.number)"
+        cell.detailTextLabel?.text = episode.title
         
         return cell
     }

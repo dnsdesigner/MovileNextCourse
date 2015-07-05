@@ -22,6 +22,12 @@ class ShowMoreViewController: UIViewController {
         self.loadDetails()
     }
     
+    deinit {
+        
+        println("\(self.dynamicType) deinit")
+        
+    }
+    
     func loadDetails() {
         
         var showDetails:String = ""

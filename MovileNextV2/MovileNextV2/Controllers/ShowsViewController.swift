@@ -26,8 +26,6 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Carregar os shows
         self.loadShows()
         
-        
-        
         // Registrar notificação de favoritos
         let name = FavoritesManager.favoritesChangedNotification
         let notificationCenter = NSNotificationCenter.defaultCenter()
@@ -52,6 +50,8 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let notificationCenter = NSNotificationCenter.defaultCenter()
         
         notificationCenter.removeObserver(self, name: name, object: nil)
+        
+        println("\(self.dynamicType) deinit")
         
     }
     
