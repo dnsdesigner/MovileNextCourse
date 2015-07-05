@@ -19,7 +19,7 @@ private enum Router: URLRequestConvertible {
     case Show(showId: String)
     case Episode(showId: String, season: Int, episodeNumber: Int)
     case Episodes(showId: String, season: Int)
-    case Popular
+    case Popular(page: Int, limit: Int)
     case Seasons(showId: String)
     
     // Constant closure
@@ -35,8 +35,8 @@ private enum Router: URLRequestConvertible {
                 return ("shows/\(showId)/seasons/\(season)/episodes/\(episodeNumber)", ["extended": "images,full"], .GET)
             case .Episodes(let showId, let season):
                 return ("shows/\(showId)/seasons/\(season)",["extended" : "images,full,episodes"], .GET)
-            case .Popular:
-                return ("shows/popular", ["page": "1", "limit": "24", "extended": "images,full"], .GET)
+            case .Popular(let page, let limit):
+                return ("shows/popular", ["page": "\(page)", "limit": "\(limit)", "extended": "images,full"], .GET)
             case .Seasons(let showId):
                 return ("shows/\(showId)/seasons", ["extended" : "images,full"], .GET)
             }
@@ -144,9 +144,9 @@ class TraktHTTPClient: NSObject {
         
     }
     
-    func getPopularShows(completion:((Result<Array<Show>, NSError?>) -> Void)?) {
+    func getPopularShows(page: Int, limit: Int, completion:((Result<Array<Show>, NSError?>) -> Void)?) {
         
-        getJSONElements(Router.Popular, completion: completion)
+        getJSONElements(Router.Popular(page: page, limit: limit), completion: completion)
         
     }
     

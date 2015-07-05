@@ -28,6 +28,11 @@ class SeasonEpisodesViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Atualizar título
+        if let seasonNumber = self.season?.number {
+            self.title = "Season \(seasonNumber)"
+        }
+        
         // Carregar dados
         self.loadData()
         

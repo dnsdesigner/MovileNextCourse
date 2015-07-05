@@ -11,13 +11,20 @@ import TraktModels
 
 class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    var page = 1
+    let limit = 24
+    var isLoading = false
+    
+    var loadingView = UIView()
+    var loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
     
     private var favoritesManager:FavoritesManager = FavoritesManager()
     private let httpClient = TraktHTTPClient()
     private var shows: [Show]?
-    private var popularShows:[Show]?
+    private var popularShows = [Show]()
     private var favoriteShows = [Show]()
     
     override func viewDidLoad() {
@@ -75,28 +82,108 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.reloadShows()
     }
     
+    func loadingView(show: Bool) {
+        
+        self.loadingView.frame = self.view.frame
+        self.loadingIndicator.frame = self.view.frame
+        
+        self.loadingView.backgroundColor = UIColor.whiteColor()
+        self.loadingView.alpha = 0.9
+        
+        self.loadingIndicator.startAnimating()
+        
+        if show == true {
+            
+            self.loadingView.addSubview(self.loadingIndicator)
+            self.view.addSubview(self.loadingView)
+            
+        } else {
+                
+            self.loadingView.removeFromSuperview()
+            self.loadingIndicator.removeFromSuperview()
+            
+        }
+        
+    }
+    
     
     func loadShows() {
-        self.httpClient.getPopularShows { (result) -> Void in
-            if let shows = result.value {
-                println("Shows carregados com sucesso!")
-                
-                self.popularShows = shows
-                
-                for show in shows {
+        
+        if self.isLoading == false {
+            
+            // Exibe a view com o loading
+            self.loadingView(true)
+            
+            // Aviso que existe uma requisição em andamento
+            self.isLoading = true
+        
+            self.httpClient.getPopularShows(1, limit: 12) { (result) -> Void in
+                if let shows = result.value {
+                    println("Shows carregados com sucesso!")
                     
-                    if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
-                        self.favoriteShows.append(show)
+                    self.popularShows = shows
+                    
+                    for show in shows {
+                        
+                        if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
+                            self.favoriteShows.append(show)
+                        }
+                        
                     }
                     
+                    self.reloadShows()
+                    self.isLoading = false
+                    
+                    // Remove a view com loading
+                    self.loadingView(false)
+                    
+                } else {
+                    println("Oops \(result.error)")
                 }
-                
-                self.reloadShows()
-                
-            } else {
-                println("Oops \(result.error)")
             }
         }
+        
+    }
+    
+    func loadMore() {
+        
+        if self.isLoading == false {
+            
+            // Exibe a view com o loading
+            self.loadingView(true)
+            
+            // Aviso que existe uma requisição em andamento
+            self.isLoading = true
+            
+            self.page += 1
+            
+            self.httpClient.getPopularShows(self.page, limit: self.limit, completion: { (result) -> Void in
+                
+                if let shows = result.value {
+                    println("Página \(self.page) de Shows carregada com sucesso!")
+                    
+                    for show in shows {
+                        self.popularShows.append(show)
+                        
+                        if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.trakt) {
+                            self.favoriteShows.append(show)
+                        }
+                    }
+                    
+                    self.reloadShows()
+                    self.isLoading = false
+                    
+                    // Remove a view com loading
+                    self.loadingView(false)
+                    
+                } else {
+                    println("Oops \(result.error)")
+                }
+                
+            })
+            
+        }
+        
     }
     
     func reloadShows() {
@@ -130,6 +217,10 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         if let show = self.shows?[indexPath.row] {
             cell.loadShow(show)
+        }
+        
+        if indexPath.row == self.popularShows.count - 2 {
+            self.loadMore()
         }
         
         return cell
