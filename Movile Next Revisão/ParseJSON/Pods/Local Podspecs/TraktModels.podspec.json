@@ -1,0 +1,37 @@
+{
+  "name": "TraktModels",
+  "version": "0.1.0",
+  "summary": "Trakt.tv models in Swift for using during Movile courses.",
+  "homepage": "https://github.com/marcelofabri/TraktModels",
+  "license": "MIT",
+  "authors": {
+    "Marcelo Fabri": "me@marcelofabri.com"
+  },
+  "source": {
+    "git": "https://github.com/marcelofabri/TraktModels.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/marcelofabri_",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "TraktModels": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "frameworks": "Foundation",
+  "dependencies": {
+    "Argo": [
+      "~> 1.0"
+    ],
+    "Runes": [
+      "~> 2.0"
+    ],
+    "ISO8601DateFormatter": [
+      "~> 0.7"
+    ]
+  }
+}

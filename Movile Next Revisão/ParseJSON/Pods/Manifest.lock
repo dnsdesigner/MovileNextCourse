@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (1.2.3)
+  - Argo (1.0.3):
+    - Box (~> 1.2)
+    - Runes (>= 1.2.2)
+  - Box (1.2.2)
+  - ISO8601DateFormatter (0.7)
+  - Result (0.4.4):
+    - Box (~> 1.2)
+  - Runes (2.0.0)
+  - TraktModels (0.1.0):
+    - Argo (~> 1.0)
+    - ISO8601DateFormatter (~> 0.7)
+    - Runes (~> 2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Argo
+  - Result
+  - TraktModels (from `https://github.com/marcelofabri/TraktModels.git`)
+
+EXTERNAL SOURCES:
+  TraktModels:
+    :git: https://github.com/marcelofabri/TraktModels.git
+
+CHECKOUT OPTIONS:
+  TraktModels:
+    :commit: f116bbd988f0fad472865cfcc1a09dcd14d6ce70
+    :git: https://github.com/marcelofabri/TraktModels.git
+
+SPEC CHECKSUMS:
+  Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
+  Argo: 480471806cf73d4074fcb94751482cd6c139ba3c
+  Box: a92e8aa4c099e6bc0733829665caf9e668ef53b8
+  ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
+  Result: b44f6bc8762bbffaf2c5df58f2c7d12c3496ced8
+  Runes: 4fe81355f4620b76b02176222d264b33e60dba51
+  TraktModels: 7303801cdcaf89358f4bd71fd68fa59aba1468d9
+
+COCOAPODS: 0.37.2

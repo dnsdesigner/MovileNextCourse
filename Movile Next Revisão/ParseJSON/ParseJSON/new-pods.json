@@ -1,0 +1,196 @@
+{
+    "responseData": {
+        "feed": {
+            "feedUrl": "https://feeds.cocoapods.org/new-pods.rss",
+            "title": "CocoaPods",
+            "link": "http://www.cocoapods.org",
+            "author": "",
+            "description": "CocoaPods new pods feed",
+            "type": "rss20",
+            "entries": [
+                {
+                    "title": "RTInstagramPopTransition",
+                    "link": "https://cocoapods.org/pods/RTInstagramPopTransition",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 10:16:56 -0700",
+                    "contentSnippet": "Pop Navigation Controller with swipe gesture on UIViewController like Instagram App\n\nAuthored by Rishabh Tayal.\n[ Available at: ...",
+                    "content": "<p><p>Pop Navigation Controller with swipe gesture on UIViewController like Instagram App</p>\n</p>\n<p>Authored by Rishabh Tayal.</p>\n<p>[ Available at: <a href=\"https://github.com/rishabhtayal/RTInstagramPopTransition.git\">https://github.com/rishabhtayal/RTInstagramPopTransition.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.0</li>\n  <li>Platform: iOS 7.0</li>\n  <li>Homepage: <a href=\"https://github.com/rishabhtayal/RTInstagramPopTransition\">https://github.com/rishabhtayal/RTInstagramPopTransition</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "SweetConsole",
+                    "link": "https://cocoapods.org/pods/SweetConsole",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 10:03:29 -0700",
+                    "contentSnippet": "A Swift`s println function alternative to log values in console like a boss!\n\nAuthored by Jan Cassio.\n[ Available at: ...",
+                    "content": "<p><p>A Swift`s println function alternative to log values in console like a boss!</p>\n</p>\n<p>Authored by Jan Cassio.</p>\n<p>[ Available at: <a href=\"https://github.com/jancassio/SweetConsole.git\">https://github.com/jancassio/SweetConsole.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.0</li>\n  <li>Platform: iOS 8.0 - OS X 10.10</li>\n  <li>Homepage: <a href=\"https://github.com/jancassio/SweetConsole\">https://github.com/jancassio/SweetConsole</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "TableViewDescriptor",
+                    "link": "https://cocoapods.org/pods/TableViewDescriptor",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 09:36:37 -0700",
+                    "contentSnippet": "Structure UItableview implementation in a data-oriented way instead of index-oriented.\n\nAuthored by GWENN GUIHAL.\n[ Available ...",
+                    "content": "<p><p>Structure UItableview implementation in a data-oriented way instead of index-oriented.</p>\n</p>\n<p>Authored by GWENN GUIHAL.</p>\n<p>[ Available at: <a href=\"https://github.com/voyages-sncf-technologies/VSTableViewDescriptor.git\">https://github.com/voyages-sncf-technologies/VSTableViewDescriptor.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.0.2</li>\n  <li>Platform: iOS 6.0</li>\n  <li>Homepage: <a href=\"https://github.com/voyages-sncf-technologies/VSTableViewDescriptor\">https://github.com/voyages-sncf-technologies/VSTableViewDescriptor</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "ChronometerKit",
+                    "link": "https://cocoapods.org/pods/ChronometerKit",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 07:42:11 -0700",
+                    "contentSnippet": "A simple Framework to setup a Chronometer with optional time limit.\n\nAuthored by Rafael Veronezi.\n[ Available at: ...",
+                    "content": "<p><p>A simple Framework to setup a Chronometer with optional time limit.</p>\n</p>\n<p>Authored by Rafael Veronezi.</p>\n<p>[ Available at: <a href=\"https://github.com/ravero/ChronometerKit.git\">https://github.com/ravero/ChronometerKit.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.1.0-beta</li>\n  <li>Platform: iOS 8.0 - OS X 10.10</li>\n  <li>Homepage: <a href=\"https://github.com/ravero/ChronometerKit\">https://github.com/ravero/ChronometerKit</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "MUKContentFetch",
+                    "link": "https://cocoapods.org/pods/MUKContentFetch",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 06:52:23 -0700",
+                    "contentSnippet": "A simple infrastracture to retrieve requested data and transform it to content object\n\nAuthored by Marco Muccinelli.\n[ ...",
+                    "content": "<p><p>A simple infrastracture to retrieve requested data and transform it to content object</p>\n</p>\n<p>Authored by Marco Muccinelli.</p>\n<p>[ Available at: <a href=\"https://github.com/muccy/MUKContentFetch.git\">https://github.com/muccy/MUKContentFetch.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.1.0</li>\n  <li>Platform: iOS 7.0</li>\n  <li>Homepage: <a href=\"https://github.com/muccy/MUKContentFetch\">https://github.com/muccy/MUKContentFetch</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "FSImageViewer_image_details",
+                    "link": "https://cocoapods.org/pods/FSImageViewer_image_details",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 04:58:55 -0700",
+                    "contentSnippet": "Added details of image such as a note, date overlay and option to mark image private or public.\n\nAuthored by Akhilraj.\n[ ...",
+                    "content": "<p><p>Added details of image such as a note, date overlay and option to mark image private or public.</p>\n</p>\n<p>Authored by Akhilraj.</p>\n<p>[ Available at: <a href=\"https://github.com/akhilrajtr/FSImageViewer.git\">https://github.com/akhilrajtr/FSImageViewer.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.7</li>\n  <li>Platform: iOS 6.0</li>\n  <li>Homepage: <a href=\"https://github.com/akhilrajtr/FSImageViewer\">https://github.com/akhilrajtr/FSImageViewer</a></li>\n  <li>License: MIT</li>\n</ul>\n<img src=\"https://raw.github.com/x2on/FSImageViewer/master/screen.png\" style=\"border:1px solid #aaa;min-width:44px;min-height:44px;margin:22px 22px 0 0;padding:4px;border:1px solid rgba(0,0,0,0.2)\">",
+                    "categories": []
+                },
+                {
+                    "title": "XMLLayouts",
+                    "link": "https://cocoapods.org/pods/XMLLayouts",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 03:31:51 -0700",
+                    "contentSnippet": "Template engine for XML\n\nAuthored by naru.\n[ Available at: https://github.com/naru-jpn/XMLLayouts.git ]\n\n  Latest version: ...",
+                    "content": "<p><p>Template engine for XML</p>\n</p>\n<p>Authored by naru.</p>\n<p>[ Available at: <a href=\"https://github.com/naru-jpn/XMLLayouts.git\">https://github.com/naru-jpn/XMLLayouts.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.1.1</li>\n  <li>Platform: iOS 6.0</li>\n  <li>Homepage: <a href=\"http://naru.jpn.com/xmllayouts\">http://naru.jpn.com/xmllayouts</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "GaugeKit",
+                    "link": "https://cocoapods.org/pods/GaugeKit",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 03:24:14 -0700",
+                    "contentSnippet": "Easy reproduce Apple&#39;s style gauges.\n                        ## Features\n                        - Cusomizible\n             ...",
+                    "content": "<p><p>Easy reproduce Apple&#39;s style gauges.\n                        ## Features\n                        - Cusomizible\n                        - Auto-resized\n                        - Support <code>@IBInspectable</code> &amp; <code>@IBDesignable</code>\n                        - Written with vanilla swift flavor :wink:</p>\n</p>\n<p>Authored by Petr Korolev.</p>\n<p>[ Available at: <a href=\"https://github.com/skywinder/GaugeKit.git\">https://github.com/skywinder/GaugeKit.git</a> ]</p>\n<ul>\n  <li>Latest version: 0.1.0</li>\n  <li>Platform: iOS 8.0</li>\n  <li>Homepage: <a href=\"https://github.com/skywinder/GaugeKit\">https://github.com/skywinder/GaugeKit</a></li>\n  <li>License: MIT</li>\n</ul>\n<img src=\"https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GaugeKit_sreenshot.png\" style=\"border:1px solid #aaa;min-width:44px;min-height:44px;margin:22px 22px 0 0;padding:4px;border:1px solid rgba(0,0,0,0.2)\">\n<img src=\"https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/SWGauge_example.gif\" style=\"border:1px solid #aaa;min-width:44px;min-height:44px;margin:22px 22px 0 0;padding:4px;border:1px solid rgba(0,0,0,0.2)\">\n<img src=\"https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/ib_example_1.gif\" style=\"border:1px solid #aaa;min-width:44px;min-height:44px;margin:22px 22px 0 0;padding:4px;border:1px solid rgba(0,0,0,0.2)\">",
+                    "categories": []
+                },
+                {
+                    "title": "Tapglue",
+                    "link": "https://cocoapods.org/pods/Tapglue",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 03:14:21 -0700",
+                    "contentSnippet": "Tapglue enables mobile developers to create products with a social graph and a news feed in hours instead of weeks.\n\nAuthored ...",
+                    "content": "<p><p>Tapglue enables mobile developers to create products with a social graph and a news feed in hours instead of weeks.</p>\n</p>\n<p>Authored by Tapglue.</p>\n<p>[ Available at: <a href=\"https://github.com/tapglue/ios_sdk.git\">https://github.com/tapglue/ios_sdk.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.0.0</li>\n  <li>Platform: iOS 7.0</li>\n  <li>Homepage: <a href=\"https://developers.tapglue.com/page/ios-guide\">https://developers.tapglue.com/page/ios-guide</a></li>\n  <li>License: Apache License, Version 2.0</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "NZZTest0619",
+                    "link": "https://cocoapods.org/pods/NZZTest0619",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 02:06:58 -0700",
+                    "contentSnippet": "壮壮写文档用,有错请指正\n\nAuthored by ai966669.\n[ Available at: https://github.com/noai966669/NZZTest0619.git ]\n\n  Latest version: 0.0.2\n  ...",
+                    "content": "<p><p>壮壮写文档用,有错请指正</p>\n</p>\n<p>Authored by ai966669.</p>\n<p>[ Available at: <a href=\"https://github.com/noai966669/NZZTest0619.git\">https://github.com/noai966669/NZZTest0619.git</a> ]</p>\n<ul>\n  <li>Latest version: 0.0.2</li>\n  <li>Platform: iOS 8.0</li>\n  <li>Homepage: <a href=\"https://github.com/noai966669/NZZTest0619.git\">https://github.com/noai966669/NZZTest0619.git</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "Dixie",
+                    "link": "https://cocoapods.org/pods/Dixie",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 01:47:28 -0700",
+                    "contentSnippet": "An alternative mocking framework.\n\nAuthored by Peter Adam Wiesner, Zsolt Varnai, Csaba Szabo, and Zsombor Fuszenecker.\n[ ...",
+                    "content": "<p><p>An alternative mocking framework.</p>\n</p>\n<p>Authored by Peter Adam Wiesner, Zsolt Varnai, Csaba Szabo, and Zsombor Fuszenecker.</p>\n<p>[ Available at: <a href=\"https://github.com/Skyscanner/Dixie.git\">https://github.com/Skyscanner/Dixie.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.0</li>\n  <li>Platform: iOS</li>\n  <li>Homepage: <a href=\"https://medium.com/@Skyscanner/dixie-turning-chaos-to-your-advantage-4f3749e6d485\">https://medium.com/@Skyscanner/dixie-turning-chaos-to-your-advantage-4f3749e6d485</a></li>\n  <li>License: Apache License 2.0</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "KJMapDemo",
+                    "link": "https://cocoapods.org/pods/KJMapDemo",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 01:27:11 -0700",
+                    "contentSnippet": "A longer description of KJMapDemo in Markdown format.\n\n\nThink: Why did you write this? What is the focus? What does it ...",
+                    "content": "<p><p>A longer description of KJMapDemo in Markdown format.</p>\n\n<ul>\n<li>Think: Why did you write this? What is the focus? What does it do?</li>\n<li>CocoaPods will be using this to generate tags, and improve search results.</li>\n<li>Try to keep it short, snappy and to the point.</li>\n<li>Finally, don&#39;t worry about the indent, CocoaPods strips it!</li>\n</ul>\n</p>\n<p>Authored by Kaushik Jadhav.</p>\n<p>[ Available at: <a href=\"https://github.com/kaushikGit8/0.0.2.git\">https://github.com/kaushikGit8/0.0.2.git</a> ]</p>\n<ul>\n  <li>Latest version: 0.0.2</li>\n  <li>Platform: iOS - OS X</li>\n  <li>Homepage: <a href=\"http://www.google.com\">http://www.google.com</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "FrameLayout",
+                    "link": "https://cocoapods.org/pods/FrameLayout",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 01:22:31 -0700",
+                    "contentSnippet": "FrameLayout is a tool for positioning, sizing and arranging views without using CGRects.\n\nAuthored by Pawel Scibek.\n[ Available ...",
+                    "content": "<p><p>FrameLayout is a tool for positioning, sizing and arranging views without using CGRects.</p>\n</p>\n<p>Authored by Pawel Scibek.</p>\n<p>[ Available at: <a href=\"https://github.com/Polidea/FrameLayout.git\">https://github.com/Polidea/FrameLayout.git</a> ]</p>\n<ul>\n  <li>Latest version: 0.1</li>\n  <li>Platform: iOS 6.0</li>\n  <li>Homepage: <a href=\"https://github.com/Polidea/FrameLayout\">https://github.com/Polidea/FrameLayout</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "SSWaveView",
+                    "link": "https://cocoapods.org/pods/SSWaveView",
+                    "author": "",
+                    "publishedDate": "Fri, 19 Jun 2015 01:05:02 -0700",
+                    "contentSnippet": "Wave view. Like water.\n\nAuthored by Steven.\n[ Available at: https://github.com/qzs21/SSWaveView.git ]\n\n  Latest version: 1.0.1\n ...",
+                    "content": "<p><p>Wave view. Like water.</p>\n</p>\n<p>Authored by Steven.</p>\n<p>[ Available at: <a href=\"https://github.com/qzs21/SSWaveView.git\">https://github.com/qzs21/SSWaveView.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.0.1</li>\n  <li>Platform: iOS 5.0</li>\n  <li>Homepage: <a href=\"http://www.isteven.cn\">http://www.isteven.cn</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "OXCen",
+                    "link": "https://cocoapods.org/pods/OXCen",
+                    "author": "",
+                    "publishedDate": "Thu, 18 Jun 2015 23:35:12 -0700",
+                    "contentSnippet": "A longer description of OXCen in Markdown format.\n\n\nThink: Why did you write this? What is the focus? What does it ...",
+                    "content": "<p><p>A longer description of OXCen in Markdown format.</p>\n\n<ul>\n<li>Think: Why did you write this? What is the focus? What does it do?</li>\n<li>CocoaPods will be using this to generate tags, and improve search results.</li>\n<li>Try to keep it short, snappy and to the point.</li>\n<li>Finally, don&#39;t worry about the indent, CocoaPods strips it!</li>\n</ul>\n</p>\n<p>Authored by 张旭东.</p>\n<p>[ Available at: <a href=\"https://github.com/hytzxd/OXCen.git\">https://github.com/hytzxd/OXCen.git</a> ]</p>\n<ul>\n  <li>Latest version: 0.0.1</li>\n  <li>Platform: iOS 7.0</li>\n  <li>Homepage: <a href=\"https://github.com/hytzxd/OXCen\">https://github.com/hytzxd/OXCen</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "NZZUIImage+NZZScaleImage",
+                    "link": "https://cocoapods.org/pods/NZZUIImage+NZZScaleImage",
+                    "author": "",
+                    "publishedDate": "Thu, 18 Jun 2015 18:57:24 -0700",
+                    "contentSnippet": "公司内用,将图片压缩到指定大小\n\nAuthored by ai966669.\n[ Available at: https://github.com/noai966669/NZZUIImage-NZZScaleImage.git ]\n\n  Latest ...",
+                    "content": "<p><p>公司内用,将图片压缩到指定大小</p>\n</p>\n<p>Authored by ai966669.</p>\n<p>[ Available at: <a href=\"https://github.com/noai966669/NZZUIImage-NZZScaleImage.git\">https://github.com/noai966669/NZZUIImage-NZZScaleImage.git</a> ]</p>\n<ul>\n  <li>Latest version: 0.0.1</li>\n  <li>Platform: iOS 8.0</li>\n  <li>Homepage: <a href=\"https://github.com/noai966669/NZZUIImage-NZZScaleImage\">https://github.com/noai966669/NZZUIImage-NZZScaleImage</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "MoABContactsManager",
+                    "link": "https://cocoapods.org/pods/MoABContactsManager",
+                    "author": "",
+                    "publishedDate": "Thu, 18 Jun 2015 18:15:37 -0700",
+                    "contentSnippet": "MoABContactsManager is a wrapper of AddressBook.framework which allows you to get, create, update or delete contacts in an easy ...",
+                    "content": "<p><p>MoABContactsManager is a wrapper of AddressBook.framework which allows you to get, create, update or delete contacts in an easy way.</p>\n</p>\n<p>Authored by Diego Pais.</p>\n<p>[ Available at: <a href=\"https://github.com/mostachoio/MoABContactsManager.git\">https://github.com/mostachoio/MoABContactsManager.git</a> ]</p>\n<ul>\n  <li>Latest version: 0.1.0</li>\n  <li>Platform: iOS 6.0</li>\n  <li>Homepage: <a href=\"https://github.com/mostachoio/MoABContactsManager\">https://github.com/mostachoio/MoABContactsManager</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "DRDateHelpers",
+                    "link": "https://cocoapods.org/pods/DRDateHelpers",
+                    "author": "",
+                    "publishedDate": "Thu, 18 Jun 2015 17:43:23 -0700",
+                    "contentSnippet": "NSDate manipulation helpers for iOS\n\nAuthored by Dariusz Rybicki.\n[ Available at: ...",
+                    "content": "<p><p>NSDate manipulation helpers for iOS</p>\n</p>\n<p>Authored by Dariusz Rybicki.</p>\n<p>[ Available at: <a href=\"https://github.com/darrarski/DRDateHelpers-iOS.git\">https://github.com/darrarski/DRDateHelpers-iOS.git</a> ]</p>\n<ul>\n  <li>Latest version: 1.0.1</li>\n  <li>Platform: iOS 8.0</li>\n  <li>Homepage: <a href=\"https://github.com/darrarski/DRDateHelpers-iOS\">https://github.com/darrarski/DRDateHelpers-iOS</a></li>\n  <li>License: MIT</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "STQRYSVG",
+                    "link": "https://cocoapods.org/pods/STQRYSVG",
+                    "author": "",
+                    "publishedDate": "Thu, 18 Jun 2015 16:41:45 -0700",
+                    "contentSnippet": "Renders SVG shapes and paths to UIImage objects. Supports IBInspectable for UIImageViews in Interface Builder.\n\nAuthored by ...",
+                    "content": "<p><p>Renders SVG shapes and paths to UIImage objects. Supports IBInspectable for UIImageViews in Interface Builder.</p>\n</p>\n<p>Authored by Jake.</p>\n<p>[ Available at: <a href=\"https://github.com/stqry/STQRYSVG.git\">https://github.com/stqry/STQRYSVG.git</a> ]</p>\n<ul>\n  <li>Latest version: 0.0.1</li>\n  <li>Platform: iOS 7.0</li>\n  <li>Homepage: <a href=\"https://github.com/stqry/STQRYSVG\">https://github.com/stqry/STQRYSVG</a></li>\n  <li>License: BSD</li>\n</ul>",
+                    "categories": []
+                },
+                {
+                    "title": "AWSMobileAnalytics",
+                    "link": "https://cocoapods.org/pods/AWSMobileAnalytics",
+                    "author": "",
+                    "publishedDate": "Thu, 18 Jun 2015 16:16:32 -0700",
+                    "contentSnippet": "The AWS SDK for iOS provides a library, code samples, and documentation for developers to build connected mobile applications ...",
+                    "content": "<p><p>The AWS SDK for iOS provides a library, code samples, and documentation for developers to build connected mobile applications using AWS.</p>\n</p>\n<p>Authored by Amazon Web Services.</p>\n<p>[ Available at: <a href=\"https://github.com/aws/aws-sdk-ios.git\">https://github.com/aws/aws-sdk-ios.git</a> ]</p>\n<ul>\n  <li>Latest version: 2.2.0</li>\n  <li>Platform: iOS 7.0</li>\n  <li>Homepage: <a href=\"http://aws.amazon.com/sdkforios\">http://aws.amazon.com/sdkforios</a></li>\n  <li>License: Apache License, Version 2.0</li>\n</ul>",
+                    "categories": []
+                }
+            ]
+        }
+    },
+    "responseDetails": null,
+    "responseStatus": 200
+}

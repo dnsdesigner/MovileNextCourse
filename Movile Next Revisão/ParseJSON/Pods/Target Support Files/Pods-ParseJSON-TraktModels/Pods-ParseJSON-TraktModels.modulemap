@@ -1,0 +1,6 @@
+framework module TraktModels {
+  umbrella header "Pods-ParseJSON-TraktModels-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module TraktModels {
+  umbrella header "Pods-TraktServices-TraktModels-umbrella.h"
+
+  export *
+  module * { export * }
+}
