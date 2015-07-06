@@ -23,10 +23,11 @@ DEPENDENCIES:
   - Nimble
   - OHHTTPStubs
   - Result
-  - TraktModels (from `https://github.com/marcelofabri/TraktModels.git`)
+  - TraktModels (from `https://github.com/marcelofabri/TraktModels.git`, commit `f116bbd988f0fad472865cfcc1a09dcd14d6ce70`)
 
 EXTERNAL SOURCES:
   TraktModels:
+    :commit: f116bbd988f0fad472865cfcc1a09dcd14d6ce70
     :git: https://github.com/marcelofabri/TraktModels.git
 
 CHECKOUT OPTIONS:
@@ -46,4 +47,4 @@ SPEC CHECKSUMS:
   Runes: 4fe81355f4620b76b02176222d264b33e60dba51
   TraktModels: 7303801cdcaf89358f4bd71fd68fa59aba1468d9
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.37.2

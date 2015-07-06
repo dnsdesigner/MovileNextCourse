@@ -33,7 +33,7 @@ DEPENDENCIES:
   - OverlayView (from `https://github.com/marcelofabri/OverlayView.git`)
   - Result
   - TagListView
-  - TraktModels (from `https://github.com/marcelofabri/TraktModels.git`)
+  - TraktModels (from `https://github.com/marcelofabri/TraktModels.git`, commit `f116bbd988f0fad472865cfcc1a09dcd14d6ce70`)
 
 EXTERNAL SOURCES:
   FloatRatingView:
@@ -41,6 +41,7 @@ EXTERNAL SOURCES:
   OverlayView:
     :git: https://github.com/marcelofabri/OverlayView.git
   TraktModels:
+    :commit: f116bbd988f0fad472865cfcc1a09dcd14d6ce70
     :git: https://github.com/marcelofabri/TraktModels.git
 
 CHECKOUT OPTIONS:

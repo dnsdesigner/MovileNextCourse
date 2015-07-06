@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56871304AC8D21DDF29C1C23"
+               BlueprintIdentifier = "5D04598DDB0BD096476BD2AD"
                BuildableName = "TraktModels.framework"
                BlueprintName = "Pods-MovileNextV2-TraktModels"
                ReferencedContainer = "container:Pods.xcodeproj">

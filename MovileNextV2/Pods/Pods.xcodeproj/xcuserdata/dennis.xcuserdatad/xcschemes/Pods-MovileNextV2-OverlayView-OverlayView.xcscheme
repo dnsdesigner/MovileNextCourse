@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA7E1201D1C01A5F81799B53"
+               BlueprintIdentifier = "D04B098CE91A2E573E540C74"
                BuildableName = "OverlayView.bundle"
                BlueprintName = "Pods-MovileNextV2-OverlayView-OverlayView"
                ReferencedContainer = "container:Pods.xcodeproj">

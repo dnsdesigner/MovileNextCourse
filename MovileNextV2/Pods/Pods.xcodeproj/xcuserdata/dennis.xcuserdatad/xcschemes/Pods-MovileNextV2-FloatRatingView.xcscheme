@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39006AF63716FE0EA706DCC3"
+               BlueprintIdentifier = "092FD46BB6503AD07F1200EB"
                BuildableName = "FloatRatingView.framework"
                BlueprintName = "Pods-MovileNextV2-FloatRatingView"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "742AB3E1A85EA67113A05F60"
-               BuildableName = "ISO8601DateFormatter.framework"
-               BlueprintName = "Pods-MovileNext-ISO8601DateFormatter"
+               BlueprintIdentifier = "B26742E696A6AE43093F0207"
+               BuildableName = "Haneke.framework"
+               BlueprintName = "Pods-MovileNext-HanekeSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

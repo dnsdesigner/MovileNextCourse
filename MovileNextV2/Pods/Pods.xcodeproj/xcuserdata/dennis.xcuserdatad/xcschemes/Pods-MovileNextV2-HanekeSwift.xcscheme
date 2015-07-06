@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D13D06B64E842772345AF0C"
+               BlueprintIdentifier = "41691365434F6D19BB562EBF"
                BuildableName = "Haneke.framework"
                BlueprintName = "Pods-MovileNextV2-HanekeSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
