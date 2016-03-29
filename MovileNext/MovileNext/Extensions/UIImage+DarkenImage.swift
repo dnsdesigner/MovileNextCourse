@@ -9,7 +9,10 @@ extension UIImage {
         filter.setValue(input, forKey: "inputImage")
         filter.setValue(-2, forKey: "inputEV")
         
-        let output = UIImage(CIImage: filter.outputImage)
+        let cgImage = context.createCGImage(filter!.outputImage!,
+                                              fromRect: filter!.outputImage!.extent)
+
+        let output = UIImage(CGImage: cgImage)
         return output!
     }
 }
